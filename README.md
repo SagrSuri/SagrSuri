@@ -44,10 +44,10 @@ Hello! 👋 I'm Sagar Suri, a budding web developer currently learning HTML, CSS
 
 ## Connect with Me
 
-- **Email:** [Your Email Address]
-- **LinkedIn:** [Your LinkedIn Profile]
-- **Twitter:** [Your Twitter Handle]
-- **GitHub:** [Your GitHub Profile]
+- **Email:** [sagarsuriofficial@gmail.com]
+- **LinkedIn:** [https://linkedin.com/in/sagarsuriofficial]
+- **Twitter:** [https://twitter.com/sagarsuri_in]
+- **GitHub:** [https://github.com/sagarsuriofficial]
 
 ## Let's Code Together!
 
