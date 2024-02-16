@@ -1,37 +1,38 @@
-# Welcome to [Your Name]'s Profile!
+<h1 align="center">Hi 👋, I'm Sagar Suri</h1>
+<h3 align="center">A passionate Full-Stack Developer from Nagpur,India</h3>
 
-## About Me
-I'm a passionate software developer with a keen interest in web development and programming. I love to explore new technologies and solve challenging problems. Constantly learning and improving is what drives me forward in my journey as a developer.
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=sagarsuriofficial&label=Profile%20views&color=0e75b6&style=flat" alt="sagarsuriofficial" /> </p>
 
-## Skills
+<p align="left"> <a href="https://twitter.com/sagar_suri" target="blank"><img src="https://img.shields.io/twitter/follow/sagar_suri?logo=twitter&style=for-the-badge" alt="sagar_suri" /></a> </p>
 
-### Programming Languages
-- Python: ![Python Level](https://gitscore.com/{your-github-username}/python)
-- JavaScript: ![JavaScript Level](https://gitscore.com/{your-github-username}/javascript)
-- Java: ![Java Level](https://gitscore.com/{your-github-username}/java)
-- C++: ![C++ Level](https://gitscore.com/{your-github-username}/cpp)
-- SQL: ![SQL Level](https://gitscore.com/{your-github-username}/sql)
+- 🔭 I’m currently working on [SAGARSURI.IN](https://github.com/SagarSuriOfficial/SAGARSURI.IN)
 
-### Web Development
-- HTML: ![HTML Level](https://gitscore.com/{your-github-username}/html)
-- CSS: ![CSS Level](https://gitscore.com/{your-github-username}/css)
-- JavaScript: ![JavaScript Level](https://gitscore.com/{your-github-username}/javascript)
-- ReactJS: ![ReactJS Level](https://gitscore.com/{your-github-username}/reactjs)
-- Node.js: ![Node.js Level](https://gitscore.com/{your-github-username}/nodejs)
-- Express.js: ![Express.js Level](https://gitscore.com/{your-github-username}/expressjs)
-- MongoDB: ![MongoDB Level](https://gitscore.com/{your-github-username}/mongodb)
-- SQL: ![SQL Level](https://gitscore.com/{your-github-username}/sql)
-- RESTful APIs: ![RESTful APIs Level](https://gitscore.com/{your-github-username}/restful-apis)
-- Bootstrap: ![Bootstrap Level](https://gitscore.com/{your-github-username}/bootstrap)
+- 🌱 I’m currently learning **tailwindcss, learning from PW Skills.**
 
-## Projects
-- [Project 1 Name](link-to-project): Short description of the project.
-- [Project 2 Name](link-to-project): Short description of the project.
-- [Project 3 Name](link-to-project): Short description of the project.
+- 👨‍💻 All of my projects are available at [https://github.com/SagarSuriOfficial](https://github.com/SagarSuriOfficial)
 
-## Contact Me
-- LinkedIn: [Your LinkedIn Profile](link-to-linkedin)
-- GitHub: [Your GitHub Profile](link-to-github)
-- Email: your.email@example.com
+- 📝 I regularly write articles on [https://blogspot.com/sagrsuri](https://blogspot.com/sagrsuri)
 
-Feel free to reach out to discuss collaborations or just to connect!
+- 📫 How to reach me **sagarsuriofficial@gmail.com**
+
+- 📄 Know about my experiences [https://linkedin.com/in/sagarsuriofficial](https://linkedin.com/in/sagarsuriofficial)
+
+### Blogs posts
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://twitter.com/sagar_suri" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="sagar_suri" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/sagarsuriofficial" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sagarsuriofficial" height="30" width="40" /></a>
+<a href="https://medium.com/@sagarsuriofficial" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@sagarsuriofficial" height="30" width="40" /></a>
+<a href="https://www.youtube.com/c/sagarsuriofficial" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="sagarsuriofficial" height="30" width="40" /></a>
+<a href="/https://blogspot.com/sagrsuri" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="https://blogspot.com/sagrsuri" height="30" width="40" /></a>
+</p>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://reactnative.dev/" target="_blank" rel="noreferrer"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a> </p>
+
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=sagarsuriofficial&show_icons=true&locale=en&layout=compact" alt="sagarsuriofficial" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sagarsuriofficial&" alt="sagarsuriofficial" /></p>
