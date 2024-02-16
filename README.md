@@ -21,9 +21,7 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 - **Bootstrap**: Good
 
 ## Projects
-- [Portfolio Website](link-to-portfolio): My personal portfolio showcasing my projects and skills.
-- [To-Do List App](link-to-todo-app): A simple to-do list application built with HTML, CSS, and JavaScript.
-- [Blog Website](link-to-blog): A blogging platform developed using Node.js, Express.js, and MongoDB.
+- [Portfolio Website]([link-to-portfolio](https://sagarsuri.netlify.app/)): My personal portfolio showcasing my projects and skills.
 
 ## Learning Goals
 - Master React.js and build dynamic user interfaces.
@@ -32,9 +30,9 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 - Learn to design and implement RESTful APIs for seamless communication between front-end and back-end systems.
 
 ## Contact Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagarsuri/)
-[![Twitter](https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter)](https://twitter.com/YourTwitterHandle)
-[![YouTube](https://img.shields.io/badge/YouTube--red?style=social&logo=youtube)](https://www.youtube.com/your-channel)
-- Email: sagar.suri@example.com
+[![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagrsuri/)
+[![Twitter](https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter)](https://twitter.com/sagarsuri_in)
+[![YouTube](https://img.shields.io/badge/YouTube--red?style=social&logo=youtube)](https://www.youtube.com/@sagrsuri)
+- Email: sagarsuriofficial@gmail.com
 
 Let's connect and learn together in the exciting world of full-stack web development!
