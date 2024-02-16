@@ -1,60 +1,37 @@
-### Hi there 👋
-
-<!--
-**SagarSuriOfficial/SagarSuriOfficial** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-# Sagar Suri's Profile
+# Welcome to [Your Name]'s Profile!
 
 ## About Me
-
-Hello! 👋 I'm Sagar Suri, a budding web developer currently learning HTML, CSS, and JavaScript. I'm passionate about creating engaging and user-friendly websites. I enjoy the process of turning ideas into interactive and visually appealing web pages.
+I'm a passionate software developer with a keen interest in web development and programming. I love to explore new technologies and solve challenging problems. Constantly learning and improving is what drives me forward in my journey as a developer.
 
 ## Skills
 
-- **Languages:** HTML, CSS, JavaScript
-- **Tools:** Visual Studio Code, Git
-- **Learning:** [List any other technologies or skills you are currently learning]
+### Programming Languages
+- Python: ![Python Level](https://gitscore.com/{your-github-username}/python)
+- JavaScript: ![JavaScript Level](https://gitscore.com/{your-github-username}/javascript)
+- Java: ![Java Level](https://gitscore.com/{your-github-username}/java)
+- C++: ![C++ Level](https://gitscore.com/{your-github-username}/cpp)
+- SQL: ![SQL Level](https://gitscore.com/{your-github-username}/sql)
+
+### Web Development
+- HTML: ![HTML Level](https://gitscore.com/{your-github-username}/html)
+- CSS: ![CSS Level](https://gitscore.com/{your-github-username}/css)
+- JavaScript: ![JavaScript Level](https://gitscore.com/{your-github-username}/javascript)
+- ReactJS: ![ReactJS Level](https://gitscore.com/{your-github-username}/reactjs)
+- Node.js: ![Node.js Level](https://gitscore.com/{your-github-username}/nodejs)
+- Express.js: ![Express.js Level](https://gitscore.com/{your-github-username}/expressjs)
+- MongoDB: ![MongoDB Level](https://gitscore.com/{your-github-username}/mongodb)
+- SQL: ![SQL Level](https://gitscore.com/{your-github-username}/sql)
+- RESTful APIs: ![RESTful APIs Level](https://gitscore.com/{your-github-username}/restful-apis)
+- Bootstrap: ![Bootstrap Level](https://gitscore.com/{your-github-username}/bootstrap)
 
 ## Projects
+- [Project 1 Name](link-to-project): Short description of the project.
+- [Project 2 Name](link-to-project): Short description of the project.
+- [Project 3 Name](link-to-project): Short description of the project.
 
-### My Portfolio Website
-- A personal portfolio showcasing my web development journey.
-- Built with HTML, CSS, and JavaScript.
-- [Link to Portfolio Repository or Live Demo]
+## Contact Me
+- LinkedIn: [Your LinkedIn Profile](link-to-linkedin)
+- GitHub: [Your GitHub Profile](link-to-github)
+- Email: your.email@example.com
 
-### [Another Project Name]
-- [Brief Description]
-- [Technologies Used]
-- [Link to Project Repository or Live Demo]
-
-## Learning Resources
-
-- Currently following [Any Online Courses or Books] to enhance my web development skills.
-
-## Connect with Me
-
-- **Email:** [sagarsuriofficial@gmail.com]
-- **LinkedIn:** [https://linkedin.com/in/sagarsuriofficial]
-- **Twitter:** [https://twitter.com/sagarsuri_in]
-- **GitHub:** [https://github.com/sagarsuriofficial]
-
-## Let's Code Together!
-
-I'm always looking to connect with fellow learners and developers. Feel free to reach out for collaboration or just to chat about coding and web development.
-
-![Coding Image](url_to_an_image)
-
----
-
-*This README is a living document, subject to updates as I continue my coding journey.*
+Feel free to reach out to discuss collaborations or just to connect!
