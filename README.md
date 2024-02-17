@@ -1,7 +1,7 @@
 # Hi there! 👋 I'm <a href="https://youtube.com/@sagrsuri" alt="youtube"  target="_blank" >SAGAR SURI</a>
 ## About Me
 I'm an aspiring full-stack web developer with a strong enthusiasm for learning and building web applications. My journey in web development started with a passion for creating visually appealing and functional websites, and it has since evolved into a deep interest in mastering both front-end and back-end technologies. I'm dedicated to honing my skills and expanding my knowledge to become proficient in all aspects of full-stack development.
-
+<!-- 
 ## Skills & Expertise
 
 ### Front-End Development
@@ -26,7 +26,7 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 - Master React.js and build dynamic user interfaces.
 - Deepen my understanding of server-side development with Node.js and Express.js.
 - Gain proficiency in database management and integration, particularly with MongoDB.
-- Learn to design and implement RESTful APIs for seamless communication between front-end and back-end systems.
+- Learn to design and implement RESTful APIs for seamless communication between front-end and back-end systems. -->
 
 ## Contact Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagrsuri/)
