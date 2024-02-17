@@ -36,7 +36,8 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 [![Whatsapp](https://img.shields.io/badge/Whatsapp--red?style=social&logo=whatsapp)](https://wa.me/918446262100)
 [![Email](https://img.shields.io/badge/Email--red?style=social&logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=sagarsuriofficial@gmail.com")
 
-[![Blog](https://img.shields.io/badge/Link--blue?style=social&logo=link)](https://www.linkedin.com/in/sagrsuri/)
+[![Blog]([https://img.shields.io/badge/Link--blue?style=social&logo=link](https://img.shields.io/website?url=https%3A%2F%2Fsagarsuri.in
+)](https://www.linkedin.com/in/sagrsuri/)
 
 *SAGARSURIOFFICIAL@GMAIL.COM*
 
