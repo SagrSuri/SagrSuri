@@ -35,6 +35,8 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 [![Instagram](https://img.shields.io/badge/Instagram--red?style=social&logo=instagram)](https://www.instagram.com/sagarsuri.in)
 [![Whatsapp](https://img.shields.io/badge/Whatsapp--red?style=social&logo=whatsapp)](https://wa.me/918446262100)
 
+[![Gmail](https://img.shields.io/badge/Gmail--red?style=social&logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=sagarsuriofficial@gmail.com")
+
 - Email:<a href="mailto:sagarsuriofficial@gmail.com">sagarsuriofficial@gmail.com</a>
 
 
