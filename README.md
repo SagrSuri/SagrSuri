@@ -36,7 +36,7 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 [![Whatsapp](https://img.shields.io/badge/Whatsapp--red?style=social&logo=whatsapp)](https://wa.me/918446262100)
 
 
-- Email: [![Email](https://img.shields.io/badge/Gmail--red?style=social&logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=sagarsuriofficial@gmail.com")
+[![Email](https://img.shields.io/badge/Gmail--red?style=social&logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=sagarsuriofficial@gmail.com")
 
 
 
