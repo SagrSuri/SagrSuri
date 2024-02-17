@@ -36,5 +36,6 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 [![Whatsapp](https://img.shields.io/badge/Whatsapp--red?style=social&logo=whatsapp)](https://wa.me/918446262100)
 
 - Email: sagarsuriofficial@gmail.com
+[Mail me](mailto:sagarsuriofficial@gmail.com)
 
 Let's connect and learn together in the exciting world of full-stack web development!
