@@ -17,10 +17,10 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 ### Additional Skills
 - **Git**: Good
 - **RESTful APIs**: Beginner
-- **Bootstrap**: Good
+- **tailwindcss**: Good
 
 ## Projects
-- [Portfolio Website]([link-to-portfolio](https://sagarsuri.netlify.app/)): My personal portfolio showcasing my projects and skills.
+[![My Portfolio Website](https://img.icons8.com/?size=100&id=68247&format=png)](https://sagarsuri.netlify.app) My personal portfolio showcasing my projects and skills.
 
 ## Learning Goals
 - Master React.js and build dynamic user interfaces.
