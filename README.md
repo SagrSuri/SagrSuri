@@ -33,7 +33,7 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 [![Twitter](https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter)](https://twitter.com/sagarsuri_in)
 [![YouTube](https://img.shields.io/badge/YouTube--red?style=social&logo=youtube)](https://www.youtube.com/@sagrsuri)
 [![Instagram](https://img.shields.io/badge/Instagram--red?style=social&logo=instagram)](https://www.instagram.com/sagarsuri.in)
-[![Email](https://img.shields.io/badge/Gmail--red?style=social&logo=gmail)](https://wa.me/918806116794) 
+[![Whatsapp](https://img.shields.io/badge/Whatsapp--red?style=social&logo=whatsapp)](https://wa.me/918446262100) 
 - Email: sagarsuriofficial@gmail.com
 
 Let's connect and learn together in the exciting world of full-stack web development!
