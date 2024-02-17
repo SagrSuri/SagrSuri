@@ -20,7 +20,7 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 - **tailwindcss**: Good
 
 ## Projects
-[![My Portfolio Website](https://img.icons8.com/?size=100&id=92033&format=png)](https://sagarsuri.netlify.app) My personal portfolio showcasing my projects and skills.
+[![My Portfolio Website](https://img.icons8.com/?size=100&id=578qSFoqmvjx&format=png)](https://sagarsuri.netlify.app) My personal portfolio showcasing my projects and skills.
 
 ## Learning Goals
 - Master React.js and build dynamic user interfaces.
