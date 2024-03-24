@@ -31,15 +31,6 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 - Learn to design and implement RESTful APIs for seamless communication between front-end and back-end systems. -->
 
 
-
-
-
-
-
-
-
-
-
 ## Contact Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagrsuri/)
 [![Blogger](https://img.shields.io/badge/Blogger--red?style=social&logo=blogger)](https://sagarsurics.blogspot.com)
@@ -47,7 +38,7 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 [![Twitter](https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter)](https://twitter.com/sagrsuri)
 [![Instagram](https://img.shields.io/badge/Instagram--red?style=social&logo=instagram)](https://www.instagram.com/sagarsuri.in)
 [![Whatsapp](https://img.shields.io/badge/Whatsapp--red?style=social&logo=whatsapp)](https://wa.me/918446262100)
-[![Email](https://img.shields.io/badge/Email--red?style=social&logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=sagrsuri@gmail.com")
+
 
 📩 *SAGRSURI@GMAIL.COM*
 
