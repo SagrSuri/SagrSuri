@@ -30,6 +30,16 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 - Gain proficiency in database management and integration, particularly with MongoDB.
 - Learn to design and implement RESTful APIs for seamless communication between front-end and back-end systems. -->
 
+
+
+
+
+
+
+
+
+
+
 ## Contact Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagrsuri/)
 [![Blogger](https://img.shields.io/badge/Blogger--red?style=social&logo=blogger)](https://sagarsurics.blogspot.com)
