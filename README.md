@@ -32,6 +32,7 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 
 ## Contact Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagrsuri/)
+[![Blogger](https://img.shields.io/badge/Blogger--red?style=social&logo=blogger)](https://www.sagarsurics.blogspot.com)
 [![YouTube](https://img.shields.io/badge/YouTube--red?style=social&logo=youtube)](https://www.youtube.com/@sagrsuri)
 [![Twitter](https://img.shields.io/badge/Twitter--blue?style=social&logo=twitter)](https://twitter.com/sagrsuri)
 [![Instagram](https://img.shields.io/badge/Instagram--red?style=social&logo=instagram)](https://www.instagram.com/sagarsuri.in)
