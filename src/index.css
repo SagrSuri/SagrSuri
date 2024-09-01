@@ -1,0 +1,26 @@
+@import './Animation.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; 
+}
+
+html {
+  scrollbar-width: thin; /* Options: auto, thin, none */
+  scrollbar-color: #257a7a #96c264; /* thumb and track color */
+}
+
+
+
+

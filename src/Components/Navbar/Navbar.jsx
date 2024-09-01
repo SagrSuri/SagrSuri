@@ -1,0 +1,45 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useState } from 'react';
+import Toggel from '../Toggel/Toggel';
+import { Link } from 'react-router-dom';
+import { FaHandshake } from 'react-icons/fa';
+import { navbarLinks } from './data.js';  // Import the external data
+
+function Navbar() {
+    const [darkMode, setDarkMode] = useState(false);
+    
+    useEffect(() => {
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [darkMode]);
+
+    const toggleChange = () => {
+        setDarkMode((prevMode) => !prevMode);
+    }
+
+    return (
+        <div className='h-14 flex justify-between px-6 items-center align-middle text-black dark:text-white border-[1px] dark:border-slate-700 '>
+            <div>
+                <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
+                    <Link to={'/'}><FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' /> </Link>
+                    Portfolio
+                </h1>
+            </div>
+            <ul className='flex justify-center items-center gap-5 p-2 font-bold'>
+                {navbarLinks.map((link, index) => (
+                    <li key={index} className='font-serif font-normal py-[1px] px-3 border-[1px] border-black dark:border-white rounded-full bg-white dark:bg-black dark:hover:bg-blue-500 hover:bg-green-400'>
+                        <Link to={link.path}>{link.label}</Link>
+                    </li>
+                ))}
+            </ul>
+            <div className='text-xl'>
+                <Toggel darkMode={darkMode} toggelChange={toggleChange} />
+            </div>
+        </div>
+    );
+}
+
+export default Navbar;
