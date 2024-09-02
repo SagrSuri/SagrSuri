@@ -1,9 +1,10 @@
-// Components/Contact.jsx
+
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { IoSend } from 'react-icons/io5';
 import Home from '../Home/Home';
+import { toast } from 'react-hot-toast'; // Import toast
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -31,11 +32,18 @@ function Contact() {
 
     // Validate form data
     const errors = {};
+    if (!formData.name) {
+      errors.name = 'Please enter your name.';
+    }
     if (!validateEmail(formData.email)) {
       errors.email = 'Please enter a valid email address.';
     }
+    if (!formData.message) {
+      errors.message = 'Please enter your message.';
+    }
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
+      Object.values(errors).forEach((error) => toast.error(error)); // Show error messages
       return;
     }
 
@@ -54,11 +62,11 @@ function Contact() {
         message: '',
       });
       setFormErrors({});
-      alert('Message sent successfully!');
+      toast.success('Message sent successfully!'); // Show success message
     })
     .catch((error) => {
       console.error('Error sending email:', error.text);
-      alert('Failed to send message. Please try again later.');
+      toast.error(' "Something Wrong!" Please Use the Below Email to Send the Message'); // Show failure message
     });
   };
 
@@ -68,6 +76,9 @@ function Contact() {
         className="flex flex-col py-20 items-center justify-center gap-4"
         onSubmit={handleSubmit}
       >
+        <p className='bg-slate-500 p-2 rounded-lg my-3'>
+          Sending to <span className='text-xl font-serif text-yellow-500'>SAGRSURI@GMAIL.COM</span>
+        </p>
         <label htmlFor="name" className="hidden">Name</label>
         <input
           type="text"
@@ -105,6 +116,9 @@ function Contact() {
           value={formData.message}
           onChange={handleChange}
         ></textarea>
+        {formErrors.message && (
+          <span className="text-red-500 text-sm">{formErrors.message}</span>
+        )}
         <button
           type="submit"
           className="w-24 h-10 rounded-lg border-[1px] outline-none border-green-800 bg-slate-600 text-xl shadow-md hover:bg-slate-700 text-green-500 dark:text-slate-100 hover:text-white dark:hover:text-blue-600 transition duration-300 flex justify-center align-middle items-center"

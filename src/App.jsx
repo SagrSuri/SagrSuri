@@ -10,6 +10,7 @@ import Contact from './Components/Contact/Contact';
 import Profile from './Components/Profile/Profile';
 import Loader from './Components/Loader/Loader';
 import ProgressBar from './Components/ProgressBar/ProgressBar'; // Import the ProgressBar component
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className='dark:bg-slate-950 text-black dark:text-white bg-slate-50'>
       <ProgressBar /> {/* Add ProgressBar component */}
+      <Toaster/>
       {loading ? (
         <Loader />
       ) : (
