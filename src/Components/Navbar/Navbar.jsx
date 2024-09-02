@@ -12,7 +12,7 @@ function Navbar({ darkMode , toggelChange}) {
         <div className='h-14 flex justify-between px-6 items-center align-middle text-black dark:text-white border-[1px] dark:border-slate-700 shadow-sm'>
             <div>
                 <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
-                    <Link to={'/'}><FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' /> </Link>
+                    <Link to={'/SagrSuri/'}><FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' /> </Link>
                     Portfolio
                 </h1>
             </div>

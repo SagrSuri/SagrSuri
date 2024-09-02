@@ -54,13 +54,13 @@ function App() {
         <Loader />
       ) : (
         <Routes>
-          <Route path='*' element={<NotFound />} />
-          <Route path='/' element={<Home />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/skills' element={<Skills />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/certificates' element={<Certificates />} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/SagrSuri/*' element={<NotFound />} />
+          <Route path='/SagrSuri/' element={<Home />} />
+          <Route path='/SagrSuri/profile' element={<Profile />} />
+          <Route path='/SagrSuri/skills' element={<Skills />} />
+          <Route path='/SagrSuri/projects' element={<Projects />} />
+          <Route path='/SagrSuri/certificates' element={<Certificates />} />
+          <Route path='/SagrSuri/contact' element={<Contact />} />
         </Routes>
       )}
     </div>

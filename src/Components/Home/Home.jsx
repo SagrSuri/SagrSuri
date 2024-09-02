@@ -80,19 +80,19 @@ function Home({ children }) {
                             </li>
                             <div className='flex flex-col justify-center items-center gap-3 font-bold text-black dark:text-white costomization'>
                                 <li>
-                                    <Link to={'/profile'} onClick={hideDrawer}>Home</Link>
+                                    <Link to={'/SagrSuri/profile'} onClick={hideDrawer}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/Skills"} onClick={hideDrawer}>Skills</Link>
+                                    <Link to={"/SagrSuri/Skills"} onClick={hideDrawer}>Skills</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/projects"} onClick={hideDrawer}>Projects</Link>
+                                    <Link to={"/SagrSuri/projects"} onClick={hideDrawer}>Projects</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/certificates"} onClick={hideDrawer}>Certificates</Link>
+                                    <Link to={"/SagrSuri/certificates"} onClick={hideDrawer}>Certificates</Link>
                                 </li>
                                 <li>
-                                    <Link to={"/contact"} onClick={hideDrawer}>Contact</Link>
+                                    <Link to={"/SagrSuri/contact"} onClick={hideDrawer}>Contact</Link>
                                 </li>
                                 <li onClick={hideDrawer} className='text-2xl'>
                                     <Toggel darkMode={darkMode} toggelChange={toggleChange} />
@@ -103,7 +103,7 @@ function Home({ children }) {
                 </div>
                 <div>
                     <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
-                        <Link to={'/profile'}>
+                        <Link to={'/SagrSuri/'}>
                             <FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' />
                         </Link>
                         Portfolio
