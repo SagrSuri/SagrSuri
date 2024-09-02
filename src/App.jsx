@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import NotFound from './NotFound';
 import Skills from './Components/Skills/Skills';
@@ -11,9 +11,11 @@ import Profile from './Components/Profile/Profile';
 import Loader from './Components/Loader/Loader';
 import ProgressBar from './Components/ProgressBar/ProgressBar'; // Import the ProgressBar component
 import { Toaster } from 'react-hot-toast';
+import Meta from './Components/Meta/Meta'; // Import the Meta component
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation(); // To get the current route
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,8 +25,29 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Determine the current page based on the route
+  const getPageName = () => {
+    switch (location.pathname) {
+      case '/':
+        return 'home';
+      case '/profile':
+        return 'profile';
+      case '/skills':
+        return 'skills';
+      case '/projects':
+        return 'projects';
+      case '/certificates':
+        return 'certificates';
+      case '/contact':
+        return 'contact';
+      default:
+        return 'home'; // Default to home or notFound if route is not matched
+    }
+  };
+
   return (
     <div className='dark:bg-slate-950 text-black dark:text-white bg-slate-50'>
+      <Meta page={getPageName()} /> {/* Set meta tags based on current page */}
       <ProgressBar /> {/* Add ProgressBar component */}
       <Toaster/>
       {loading ? (
