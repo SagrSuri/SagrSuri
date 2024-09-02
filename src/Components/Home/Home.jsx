@@ -8,26 +8,28 @@ import Footer from '../Footer/Footer';
 import Toggel from '../Toggel/Toggel';
 import Navbar from '../Navbar/Navbar';
 import Welcome from '../Welcome';
+import { FaHandshake } from 'react-icons/fa';
+import './Drawer.css'
 
 // eslint-disable-next-line react/prop-types
 function Home({ children }) {
 
     function changeWidth() {
-        const drawerSide = document.getElementsByClassName("drawer-side");
-        if (drawerSide.length > 0) {
-            drawerSide[0].style.width = 'auto';
+        const drawerSide = document.querySelector(".drawer-side");
+        if (drawerSide) {
+            drawerSide.style.width = 'auto';
         }
     }
 
     function hideDrawer() {
-        const element = document.getElementsByClassName("drawer-toggle");
-        if (element.length > 0) {
-            element[0].checked = false;
+        const element = document.querySelector(".drawer-toggle");
+        if (element) {
+            element.checked = false;
         }
 
-        const drawerSide = document.getElementsByClassName("drawer-side");
-        if (drawerSide.length > 0) {
-            drawerSide[0].style.width = '0';
+        const drawerSide = document.querySelector(".drawer-side");
+        if (drawerSide) {
+            drawerSide.style.width = '0';
         }
     }
 
@@ -48,55 +50,64 @@ function Home({ children }) {
 
     return (
         <div className='w-full min-h-screen flex flex-col relative'> {/* Using flexbox and relative positioning */}
-            <div className="drawer md:hidden">
-                <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content">
-                    <label htmlFor="my-drawer">
-                        <FiMenu
-                            onClick={changeWidth}
-                            size={"2rem"}
-                            className="font-bold dark:text-white text-black m-4"
-                        />
-                    </label>
+            <div className='flex justify-center items-center align-middle pr-4 xl:hidden lg:hidden'>
+                <div className="drawer">
+                    <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+                    <div className="drawer-content">
+                        <label htmlFor="my-drawer" className='btn-primary drawer-button'>
+                            <FiMenu
+                                onClick={changeWidth}
+                                size={"2rem"}
+                                className="font-bold dark:text-white text-black m-4 cursor-pointer"
+                            />
+                        </label>
+                    </div>
+                    
+                    <div  onClick={hideDrawer} className="drawer-side z-50"> {/* Ensure drawer is above content */}
+                        <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={hideDrawer}></label>
+                        <ul className="menu dark:bg-base-200 bg-slate-200 text-base-content min-h-full w-40 p-4">
+                            <li className="w-fit mb-4">
+                                <button onClick={hideDrawer} className="absolute right-2 z-50">
+                                    <AiFillCloseCircle size={24} />
+                                </button>
+                            </li>
+                            <div className='flex flex-col justify-center items-center gap-3 font-bold text-black dark:text-white costomization'>
+                                <li>
+                                    <Link to={'/profile'} onClick={hideDrawer}>Home</Link>
+                                </li>
+                                <li>
+                                    <Link to={"/Skills"} onClick={hideDrawer}>Skills</Link>
+                                </li>
+                                <li>
+                                    <Link to={"/projects"} onClick={hideDrawer}>Projects</Link>
+                                </li>
+                                <li>
+                                    <Link to={"/certificates"} onClick={hideDrawer}>Certificates</Link>
+                                </li>
+                                <li>
+                                    <Link to={"/contact"} onClick={hideDrawer}>Contact</Link>
+                                </li>
+                                <li onClick={hideDrawer} className='text-2xl' >
+                                    <Toggel darkMode={darkMode} toggelChange={toggleChange} />
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
-                <div className="drawer-side">
-                    <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu dark:bg-base-300 bg-slate-300 text-base-content min-h-full w-52 p-4">
-                        <li className="w-fit absolute right-2 z-50">
-                            <button onClick={hideDrawer}>
-                                <AiFillCloseCircle size={24} />
-                            </button>
-                        </li>
-                        <div className='flex flex-col justify-center items-center gap-3 font-bold'>
-                            <li>
-                                <Link to="/" >Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/Skills">Skills</Link>
-                            </li>
-                            <li>
-                                <Link to="/projects">Projects</Link>
-                            </li>
-                            <li>
-                                <Link to="/certificates">Certificates</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                            <li>
-                                <Toggel darkMode={darkMode} toggelChange={toggleChange} />
-                            </li>
-                        </div>
-                    </ul>
+                <div>
+                    <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
+                        <Link to={'/profile'}><FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' /> </Link>
+                        Portfolio
+                    </h1>
                 </div>
             </div>
             <div className='hidden lg:block sticky top-0 z-40 bg-white dark:bg-black'>
                 <Navbar />
             </div>
-            <div className='flex-grow z-10'> {/* Ensures children are underneath the Navbar */}
+            <div className='flex-grow z-10'>  {/* Ensures children are underneath the Navbar */}
                 {children ? children : <Welcome/> }
             </div>
-            <div> {/* Footer without fixed position */}
+            <div className='relative'> {/* Ensures footer is on top of the main content */}
                 <Footer />
             </div>
         </div>

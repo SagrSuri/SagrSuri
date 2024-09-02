@@ -1,26 +1,26 @@
 // socialMediaLinks.js
 
 export const socialMediaLinks = [
+  {
+    id: 'Upwork',
+    label: 'Upwork',
+    href: 'https://linkedin.com/in/sagrsuri',
+    imageSrc: 'https://cdn3d.iconscout.com/3d/premium/thumb/upwork-11507329-9336281.png?f=webp',
+    alt: 'Upwork Icon',
+  },
+  {
+    id: 'Github',
+    label: 'Github',
+    href: 'https://github.com/sagrsuri',
+    imageSrc: 'https://ouch-cdn2.icons8.com/W_FSxOuaSfBv7Ol6sCwJRD3-jYjicOpPgbE1p1Q7HJk/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNDEw/LzY2ZThhYzc1LTJh/ZjAtNDk4MC1hNThl/LWMwOWY0NWIyM2Mz/NS5wbmc.png',
+    alt: 'Github Icon',
+  },
     {
       id: 'Linkedin',
       label: 'Linkedin',
       href: 'https://linkedin.com/in/sagrsuri',
       imageSrc: 'https://img.icons8.com/?size=256&id=MR3dZdlA53te&format=png',
       alt: 'Linkedin Icon',
-    },
-    {
-      id: 'Github',
-      label: 'Github',
-      href: 'https://github.com/sagrsuri',
-      imageSrc: 'https://ouch-cdn2.icons8.com/W_FSxOuaSfBv7Ol6sCwJRD3-jYjicOpPgbE1p1Q7HJk/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNDEw/LzY2ZThhYzc1LTJh/ZjAtNDk4MC1hNThl/LWMwOWY0NWIyM2Mz/NS5wbmc.png',
-      alt: 'Github Icon',
-    },
-    {
-      id: 'Youtube',
-      label: 'Youtube',
-      href: 'https://youtube.com/@sagrsuri',
-      imageSrc: 'https://img.icons8.com/?size=256&id=qLVB1tIe9Ts9&format=png',
-      alt: 'Youtube Icon',
     },
     {
       id: 'Paypal',
@@ -49,6 +49,13 @@ export const socialMediaLinks = [
       href: 'upi://pay?pa=sagarsuri@paytm&pn=Sagar&cu=INR',
       imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeZu9pLEH0LHjH7gwM-cTnHUrIQ0o8mSGfvQ&s',
       alt: 'UPI ICON',
+    },
+    {
+      id: 'Youtube',
+      label: 'Youtube',
+      href: 'https://youtube.com/@sagrsuri',
+      imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYfhDUoD7vtHv-sm2A2hhNb0JzuxSldKA_Aw&s',
+      alt: 'Youtube Icon',
     },
     {
       id: 'Twitter',

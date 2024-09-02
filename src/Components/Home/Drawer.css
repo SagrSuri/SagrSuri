@@ -1,0 +1,5 @@
+.costomization > li{
+  border: 1px solid black;
+  border-radius: 3rem;
+  padding: 0px 5px;
+}
