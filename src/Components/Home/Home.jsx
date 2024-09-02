@@ -9,18 +9,40 @@ import Toggel from '../Toggel/Toggel';
 import Navbar from '../Navbar/Navbar';
 import Welcome from '../Welcome';
 import { FaHandshake } from 'react-icons/fa';
-import './Drawer.css'
+import './Drawer.css';
 
 // eslint-disable-next-line react/prop-types
 function Home({ children }) {
 
+    //*******************DARK MODE************** */
+    const [darkMode, setDarkMode] = useState(() => {
+        const savedMode = localStorage.getItem('darkMode');
+        return savedMode ? JSON.parse(savedMode) : false;
+    });
+    useEffect(() => {
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    }, [darkMode]);
+    
+    const toggleChange = () => {
+        setDarkMode(!darkMode);
+      };
+   //*********************DARK MODE END******************* */
+
+   
+
+    // Function to adjust the width of the drawer
     function changeWidth() {
         const drawerSide = document.querySelector(".drawer-side");
         if (drawerSide) {
             drawerSide.style.width = 'auto';
         }
     }
-
+    // Function to hide the drawer
     function hideDrawer() {
         const element = document.querySelector(".drawer-toggle");
         if (element) {
@@ -31,21 +53,6 @@ function Home({ children }) {
         if (drawerSide) {
             drawerSide.style.width = '0';
         }
-    }
-
-    // Toggle Button
-    const [darkMode, setDarkMode] = useState(false);
-
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [darkMode]);
-
-    const toggleChange = () => {
-        setDarkMode((prevMode) => !prevMode);
     }
 
     return (
@@ -63,7 +70,7 @@ function Home({ children }) {
                         </label>
                     </div>
                     
-                    <div  onClick={hideDrawer} className="drawer-side z-50"> {/* Ensure drawer is above content */}
+                    <div onClick={hideDrawer} className="drawer-side z-50"> {/* Ensure drawer is above content */}
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={hideDrawer}></label>
                         <ul className="menu dark:bg-base-200 bg-slate-200 text-base-content min-h-full w-40 p-4">
                             <li className="w-fit mb-4">
@@ -87,7 +94,7 @@ function Home({ children }) {
                                 <li>
                                     <Link to={"/contact"} onClick={hideDrawer}>Contact</Link>
                                 </li>
-                                <li onClick={hideDrawer} className='text-2xl' >
+                                <li onClick={hideDrawer} className='text-2xl'>
                                     <Toggel darkMode={darkMode} toggelChange={toggleChange} />
                                 </li>
                             </div>
@@ -96,13 +103,15 @@ function Home({ children }) {
                 </div>
                 <div>
                     <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
-                        <Link to={'/profile'}><FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' /> </Link>
+                        <Link to={'/profile'}>
+                            <FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' />
+                        </Link>
                         Portfolio
                     </h1>
                 </div>
             </div>
             <div className='hidden lg:block sticky top-0 z-40 bg-white dark:bg-black'>
-                <Navbar />
+                <Navbar darkMode={darkMode} toggelChange={toggleChange} />
             </div>
             <div className='flex-grow z-10'>  {/* Ensures children are underneath the Navbar */}
                 {children ? children : <Welcome/> }

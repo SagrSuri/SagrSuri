@@ -5,20 +5,8 @@ import { Link } from 'react-router-dom';
 import { FaHandshake } from 'react-icons/fa';
 import { navbarLinks } from './data.js';  // Import the external data
 
-function Navbar() {
-    const [darkMode, setDarkMode] = useState(false);
-    
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [darkMode]);
-
-    const toggleChange = () => {
-        setDarkMode((prevMode) => !prevMode);
-    }
+// eslint-disable-next-line react/prop-types
+function Navbar({ darkMode , toggelChange}) {
 
     return (
         <div className='h-14 flex justify-between px-6 items-center align-middle text-black dark:text-white border-[1px] dark:border-slate-700 '>
@@ -36,7 +24,7 @@ function Navbar() {
                 ))}
             </ul>
             <div className='text-xl'>
-                <Toggel darkMode={darkMode} toggelChange={toggleChange} />
+                <Toggel darkMode={darkMode} toggelChange={toggelChange} />
             </div>
         </div>
     );
