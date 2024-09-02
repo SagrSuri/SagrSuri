@@ -1,0 +1,14 @@
+/* ProgressBar.css */
+#nprogress .bar {
+    background: #f2057c; /* Change this to your desired color */
+    height: 5px; /* Increase the thickness */
+  }
+  
+  /* #nprogress .peg {
+    box-shadow: 0 0 10px #ff0000, 0 0 5px #ff0000; 
+  } */
+  
+  /* #nprogress .spinner-icon {
+    border-top-color: #ff0000;
+  } */
+  

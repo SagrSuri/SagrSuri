@@ -4,7 +4,7 @@ export const socialMediaLinks = [
   {
     id: 'Upwork',
     label: 'Upwork',
-    href: 'https://linkedin.com/in/sagrsuri',
+    href: 'https://www.upwork.com/freelancers/~015ba0725cc6a3204d',
     imageSrc: 'https://cdn3d.iconscout.com/3d/premium/thumb/upwork-11507329-9336281.png?f=webp',
     alt: 'Upwork Icon',
   },
