@@ -1,9 +1,10 @@
-
+/* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { IoSend } from 'react-icons/io5';
 import Home from '../Home/Home';
+import contactData from './contactData'; // Import the contact data
 import { toast } from 'react-hot-toast'; // Import toast
 
 function Contact() {
@@ -66,68 +67,95 @@ function Contact() {
     })
     .catch((error) => {
       console.error('Error sending email:', error.text);
-      toast.error(' "Something Wrong!" Please Use the Below Email to Send the Message'); // Show failure message
+      toast.error('Something went wrong! Please use the email below to send your message.'); // Show failure message
     });
   };
 
   return (
     <Home>
-      <div className='bg-slate-200 dark:bg-slate-900'>
-      <form
-        className="flex flex-col py-20 items-center justify-center gap-4"
-        onSubmit={handleSubmit}
-      >
-        <p className='bg-slate-500 p-2 rounded-lg my-3'>
-          Sending to <span className='text-xl font-serif text-yellow-500'>SAGRSURI@GMAIL.COM</span>
-        </p>
-        <label htmlFor="name" className="hidden">Name</label>
-        <input
-          type="text"
-          className="w-96 p-2 mb-3 px-4 bg-transparent border-2 border-green-800 rounded-lg outline-none italic"
-          name="name"
-          id="name"
-          placeholder="Enter Your Name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <label htmlFor="email" className="hidden">Email</label>
-        <input
-          type="email"
-          className={`w-96 p-2 mb-3 px-4 bg-transparent border-2 ${formErrors.email ? 'border-red-500' : 'border-green-800'} rounded-lg outline-none italic`}
-          name="email"
-          id="email"
-          placeholder="Your Email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-        />
-        {formErrors.email && (
-          <span className="text-red-500 text-sm">{formErrors.email}</span>
-        )}
-        <label htmlFor="message" className="hidden">Message</label>
-        <textarea
-          className="w-96 p-2 mb-3 px-4 bg-transparent border-2 border-green-800 rounded-lg resize-none outline-none italic"
-          name="message"
-          id="message"
-          placeholder="Send Message"
-          required
-          rows={3}
-          cols={20}
-          value={formData.message}
-          onChange={handleChange}
-        ></textarea>
-        {formErrors.message && (
-          <span className="text-red-500 text-sm">{formErrors.message}</span>
-        )}
-        <button
-          type="submit"
-          className="w-24 h-10 rounded-lg border-[1px] outline-none border-green-800 bg-slate-600 text-xl shadow-md hover:bg-slate-700 text-green-500 dark:text-slate-100 hover:text-white dark:hover:text-blue-600 transition duration-300 flex justify-center align-middle items-center"
-        >
-          <IoSend />
-        </button>
-      </form>
-      </div>
+      <section id="Contact" className='w-full min-h-screen p-4 bg-gray-200 dark:bg-slate-900'>
+        <div className="flex flex-col md:flex-row items-center justify-center dark:bg-[#4d2363b3] bg-slate-400 rounded-2xl mx-auto max-w-screen-lg overflow-hidden shadow-custom border-2 border-black dark:border-white">
+          {/* Contact Info Section */}
+          <div className="flex-1 p-8 bg-secondary text-white dark:bg-[#572400a7]">
+            <h1 className="text-2xl font-bold mb-4">Let's get in touch</h1>
+            <h2 className="text-lg font-medium mb-4">Open for any suggestion or to have a discussion</h2>
+            <div className="w-full h-64 mt-5">
+              <img
+                src={contactData.imageUrl}
+                alt="Contact"
+                className="block mx-auto w-full h-full rounded-xl object-cover"
+              />
+            </div>
+            <div className="flex flex-col px-4 mt-6">
+              <span className="flex items-center mb-4 text-sm font-medium">
+                <i className="fa-solid fa-location-dot text-lg mr-2 border border-white rounded-full p-1"></i>
+                {contactData.location}
+              </span>
+              <span className="flex items-center mb-4 text-sm font-medium">
+                <i className="fa-solid fa-phone text-lg mr-2 border border-white rounded-full p-1"></i>
+                {contactData.phone}
+              </span>
+              <span className="flex items-center mb-4 text-sm font-medium">
+                <i className="fa-solid fa-envelope text-lg mr-2 border border-white rounded-full p-1"></i>
+                <a href={`mailto:${contactData.email}`} className="text-blue-500 dark:text-blue-300">
+                  {contactData.email}
+                </a>
+              </span>
+            </div>
+          </div>
+
+          {/* Contact Form Section */}
+          <div className="flex-1 p-8 bg-white dark:bg-[#45451a] my-7 mx-4 rounded-lg shadow-lg">
+            <h1 className="text-2xl font-semibold mb-4 text-black dark:text-white">Fill out the form</h1>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative">
+                <i className="fa-solid fa-user text-lg text-secondary absolute top-4 left-4"></i>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={`w-full text-sm px-3 py-4 rounded-lg border-2 ${formErrors.name ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
+                />
+                {formErrors.name && <span className="text-red-500 text-sm">{formErrors.name}</span>}
+              </div>
+              <div className="relative">
+                <i className="fa-solid fa-envelope text-lg text-secondary absolute top-4 left-4"></i>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={`w-full text-sm px-3 py-4 rounded-lg border-2 ${formErrors.email ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
+                />
+                {formErrors.email && <span className="text-red-500 text-sm">{formErrors.email}</span>}
+              </div>
+              <div className="relative">
+                <i className="fa-solid fa-message text-lg text-secondary absolute top-4 left-4"></i>
+                <textarea
+                  name="message"
+                  placeholder="Leave your message here"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  className={`w-full text-sm px-3 py-4 rounded-lg border-2 ${formErrors.message ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none min-h-32 bg-white dark:bg-gray-700 dark:border-gray-600`}
+                ></textarea>
+                {formErrors.message && <span className="text-red-500 text-sm">{formErrors.message}</span>}
+              </div>
+              <button
+                type="submit"
+                className="text-sm font-medium py-4 rounded-lg w-full cursor-pointer text-white bg-secondary-light border border-secondary-light transition-colors duration-200 hover:bg-secondary hover:border-secondary flex items-center justify-center"
+              >
+                Send Message <IoSend className="ml-2" />
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </Home>
   );
 }

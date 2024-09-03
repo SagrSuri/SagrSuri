@@ -13,6 +13,24 @@ export default {
         'lg': '1024px', // Large screens (desktops)
         'xl': '1280px', // Extra large screens
       },
+      colors: {
+        primary: '#93b1a6',
+        'primary-light': 'rgba(147, 177, 166, 0.4)',
+        'primary-light-2': 'rgba(147, 177, 166, 0.7)',
+        secondary: '#056b79',
+        'secondary-light': 'rgba(9, 42, 104, 0.9)',
+        white: '#EAF2EF',
+        black: '#222222',
+      },
+      boxShadow: {
+        'custom': '0px 8px 24px rgba(149, 157, 165, 0.2)',
+      },
+      borderRadius: {
+        'large': '25px',
+      },
+      minHeight: {
+        'screen-80': '80vh',
+      },
     },
   },
   plugins: [

@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import NotFound from './NotFound';
 import Skills from './Components/Skills/Skills';
+// import Blog from './Components/Blog/Blog';
 import Certificates from './Components/Certificates/Certificates';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
@@ -58,6 +59,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/skills' element={<Skills />} />
+          {/* <Route path='/blog' element={<Blog />} /> */}
           <Route path='/projects' element={<Projects />} />
           <Route path='/certificates' element={<Certificates />} />
           <Route path='/contact' element={<Contact />} />
