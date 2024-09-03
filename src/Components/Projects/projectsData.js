@@ -1,5 +1,5 @@
 import image_project from '../../assets/project.jpg'
-import SagrSuriYoutubeAPI from '../../assets/SagrSuriYoutube.png'
+// import SagrSuriYoutubeAPI from '../../assets/SagrSuriYoutube.png'
 
 const projectsData = [
     {
@@ -38,7 +38,7 @@ const projectsData = [
       githubLink: 'https://github.com/SagrSuri/github-user',
       technologies: ['React.js', 'API'],
     },
-    {
+   /* {
       title: 'Glint',
       image: 'https://github.com/SagrSuri/themeGlint/blob/main/output.png?raw=true',
       // video: '',
@@ -46,9 +46,9 @@ const projectsData = [
       demoLink: 'https://sagarsuri.netlify.app/',
       githubLink: 'https://github.com/SagrSuri/themeGlint',
       technologies: ['HTML', 'CSS' , 'Javascript'],
-    },
+    }, */
     {
-      title: 'SAGARSURI.IN GITHUB',
+      title: 'V.1 Portfolio',
       image: 'https://github.com/SagrSuri/SAGARSURI.IN/blob/main/output.png?raw=true',
       // video: '',
       // thumbnail: image_project,
@@ -74,7 +74,7 @@ const projectsData = [
       githubLink: 'https://github.com/SagrSuri/Grid',
       technologies: ['HTML', 'CSS'],
     },
-    {
+  /*  {
       title: 'SagrSuriYoutubeAPI',
       image: SagrSuriYoutubeAPI,
       // video: '',
@@ -82,10 +82,9 @@ const projectsData = [
       demoLink: 'https://sagaryt.netlify.app/',
       githubLink: 'https://github.com/SagrSuri/SagrSuriYoutube',
       technologies: ['HTML', 'CSS' , "JavaScript"],
-    },
+    },   */
 
 
-    // Add more projects as needed
   ];
   
   export default projectsData;
