@@ -54,7 +54,7 @@ function App() {
         <Loader />
       ) : (
         <Routes>
-          <Route path='*' element={<NotFound />} />
+          <Route path='/*' element={<NotFound />} />
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/skills' element={<Skills />} />
