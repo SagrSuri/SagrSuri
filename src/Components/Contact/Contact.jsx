@@ -72,6 +72,7 @@ function Contact() {
 
   return (
     <Home>
+      <div className='bg-slate-200 dark:bg-slate-900'>
       <form
         className="flex flex-col py-20 items-center justify-center gap-4"
         onSubmit={handleSubmit}
@@ -126,6 +127,7 @@ function Contact() {
           <IoSend />
         </button>
       </form>
+      </div>
     </Home>
   );
 }

@@ -10,11 +10,11 @@ import Navbar from '../Navbar/Navbar';
 import Welcome from '../Welcome';
 import { FaHandshake } from 'react-icons/fa';
 import './Drawer.css';
+import { links } from './linkData';  // Import the links array
 
 // eslint-disable-next-line react/prop-types
 function Home({ children }) {
-
-    //*******************DARK MODE************** */
+    // Dark mode logic
     const [darkMode, setDarkMode] = useState(() => {
         const savedMode = localStorage.getItem('darkMode');
         return savedMode ? JSON.parse(savedMode) : false;
@@ -27,22 +27,19 @@ function Home({ children }) {
         }
         localStorage.setItem('darkMode', JSON.stringify(darkMode));
     }, [darkMode]);
-    
+
     const toggleChange = () => {
         setDarkMode(!darkMode);
-      };
-   //*********************DARK MODE END******************* */
+    };
 
-   
-
-    // Function to adjust the width of the drawer
+    // Drawer functions
     function changeWidth() {
         const drawerSide = document.querySelector(".drawer-side");
         if (drawerSide) {
             drawerSide.style.width = 'auto';
         }
     }
-    // Function to hide the drawer
+
     function hideDrawer() {
         const element = document.querySelector(".drawer-toggle");
         if (element) {
@@ -56,7 +53,7 @@ function Home({ children }) {
     }
 
     return (
-        <div className='w-full min-h-screen flex flex-col relative'> {/* Using flexbox and relative positioning */}
+        <div className='w-full min-h-screen flex flex-col relative'>
             <div className='flex justify-center items-center align-middle pr-4 xl:hidden lg:hidden sticky top-0 z-40 bg-white dark:bg-black'>
                 <div className="drawer">
                     <input id="my-drawer" type="checkbox" className="drawer-toggle" />
@@ -70,7 +67,7 @@ function Home({ children }) {
                         </label>
                     </div>
                     
-                    <div onClick={hideDrawer} className="drawer-side z-50 "> {/* Ensure drawer is above content */}
+                    <div onClick={hideDrawer} className="drawer-side z-50">
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={hideDrawer}></label>
                         <ul className="menu dark:bg-base-200 bg-slate-400 text-base-content min-h-full w-56 p-4 ">
                             <li className="w-fit mb-4">
@@ -79,24 +76,11 @@ function Home({ children }) {
                                 </button>
                             </li>
                             <div className='flex flex-col justify-center items-center gap-3 font-bold text-black dark:text-white costomization'>
-                                <li className='fill-left-to-right w-full'>
-                                    <Link to={'/profile'} onClick={hideDrawer}>Home</Link>
-                                </li>
-                                <li className='fill-left-to-right w-full'>
-                                    <Link to={"/Skills"} onClick={hideDrawer}>Skills</Link>
-                                </li>
-                                <li className='fill-left-to-right w-full'>
-                                    <Link to={"/projects"} onClick={hideDrawer}>Projects</Link>
-                                </li>
-                                <li className='fill-left-to-right w-full'>
-                                    <Link to={"/certificates"} onClick={hideDrawer}>Certificates</Link>
-                                </li>
-                                <li className='fill-left-to-right w-full'>
-                                    <Link to={"/blog"} onClick={hideDrawer}>blog</Link>
-                                </li>
-                                <li className='fill-left-to-right w-full'>
-                                    <Link to={"/contact"} onClick={hideDrawer}>Contact</Link>
-                                </li>
+                                {links.map((link, index) => (
+                                    <li key={index} className='fill-left-to-right w-full'>
+                                        <Link to={link.to} onClick={hideDrawer}>{link.label}</Link>
+                                    </li>
+                                ))}
                                 <li onClick={hideDrawer} className='text-2xl fill-left-to-right'>
                                     <Toggel darkMode={darkMode} toggelChange={toggleChange} />
                                 </li>
@@ -116,10 +100,10 @@ function Home({ children }) {
             <div className='hidden lg:block sticky top-0 z-40 bg-white dark:bg-black'>
                 <Navbar darkMode={darkMode} toggelChange={toggleChange} />
             </div>
-            <div className='flex-grow z-10'>  {/* Ensures children are underneath the Navbar */}
+            <div className='flex-grow z-10'>
                 {children ? children : <Welcome/> }
             </div>
-            <div className='relative'> {/* Ensures footer is on top of the main content */}
+            <div className='relative'>
                 <Footer />
             </div>
         </div>
