@@ -122,7 +122,7 @@ function Contact() {
             <h1 className="text-2xl font-semibold mb-4 text-black dark:text-white">Fill out the form</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
-                <i className="fa-solid fa-user text-lg text-secondary absolute top-4 left-4"></i>
+                {/* <i className="fa-solid fa-user text-lg text-secondary absolute top-4 left-4"></i> */}
                 <input
                   type="text"
                   name="name"
@@ -135,7 +135,7 @@ function Contact() {
                 {formErrors.name && <span className="text-red-500 text-sm">{formErrors.name}</span>}
               </div>
               <div className="relative">
-                <i className="fa-solid fa-envelope text-lg text-secondary absolute top-4 left-4"></i>
+                {/* <i className="fa-solid fa-envelope text-lg text-secondary absolute top-4 left-4"></i> */}
                 <input
                   type="email"
                   name="email"
@@ -148,7 +148,7 @@ function Contact() {
                 {formErrors.email && <span className="text-red-500 text-sm">{formErrors.email}</span>}
               </div>
               <div className="relative">
-                <i className="fa-solid fa-message text-lg text-secondary absolute top-4 left-4"></i>
+                {/* <i className="fa-solid fa-message text-lg text-secondary absolute top-4 left-4"></i> */}
                 <textarea
                   name="message"
                   placeholder="Leave your message here"
