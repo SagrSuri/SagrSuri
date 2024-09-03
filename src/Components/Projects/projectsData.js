@@ -3,11 +3,11 @@ import SagrSuriYoutubeAPI from '../../assets/SagrSuriYoutube.png'
 
 const projectsData = [
     {
-      title: 'SAGARSURI.IN',
+      title: 'V.2 Portfolio',
       image: image_project,
       // video: '',
       // thumbnail: image_project,
-      demoLink: 'https://sagarsuri.in/',
+      demoLink: 'https://old-version-portfolio.vercel.app/',
       githubLink: 'https://github.com/SagrSuri/sagarsuri',
       technologies: ['React.js','TailwindCSS' , 'CSS'],
     },
