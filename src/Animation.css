@@ -22,7 +22,7 @@
   
   .fill-left-to-right {
     background-size: 200% 100%;
-    background-image: linear-gradient(to right, transparent 50%, #53ff14dc 50%);
+    background-image: linear-gradient(to right, transparent 50%, #0af899dc 50%);
     transition: background-position 0.5s;
   }
   
@@ -31,7 +31,7 @@
   }
   
   .dark .fill-left-to-right {
-    background-image: linear-gradient(to right, transparent 50%, #47be92 50%);
+    background-image: linear-gradient(to right, transparent 50%, #0400ff 50%);
   }
   
   /* Right-to-Left Animation */

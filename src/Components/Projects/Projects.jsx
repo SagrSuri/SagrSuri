@@ -17,7 +17,7 @@ function Projects() {
             {/* <div className="heading text-center">
                         <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">Projects</h2>
                     </div> */}
-            <div className="grid grid-cols-1 pt-5 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 pt-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projectsData.map((project, index) => (
                 <div
                   key={index}

@@ -12,13 +12,13 @@ function Navbar({ darkMode , toggelChange}) {
         <div className='h-14 flex justify-between px-6 items-center align-middle text-black dark:text-white border-[1px] dark:border-slate-700 shadow-sm'>
             <div>
                 <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
-                    <Link to={'/'}><FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' /> </Link>
+                    <Link to={'/profile'}><FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' /> </Link>
                     Portfolio
                 </h1>
             </div>
             <ul className='flex justify-center items-center gap-5 p-2 font-bold'>
                 {navbarLinks.map((link, index) => (
-                    <li key={index} className='font-serif font-normal py-[1px] px-3 border-[1px] border-black dark:border-white rounded-full bg-white dark:bg-black dark:hover:bg-blue-500 hover:bg-green-400'>
+                    <li key={index} className='fill-left-to-right font-serif font-normal py-[1px] px-3 border-[1px] border-black dark:border-white rounded-full bg-white dark:bg-black '>
                         <Link to={link.path}>{link.label}</Link>
                     </li>
                 ))}

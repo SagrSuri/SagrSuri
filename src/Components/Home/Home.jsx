@@ -57,7 +57,7 @@ function Home({ children }) {
 
     return (
         <div className='w-full min-h-screen flex flex-col relative'> {/* Using flexbox and relative positioning */}
-            <div className='flex justify-center items-center align-middle pr-4 xl:hidden lg:hidden'>
+            <div className='flex justify-center items-center align-middle pr-4 xl:hidden lg:hidden sticky top-0 z-40 bg-white dark:bg-black'>
                 <div className="drawer">
                     <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                     <div className="drawer-content">
@@ -70,31 +70,34 @@ function Home({ children }) {
                         </label>
                     </div>
                     
-                    <div onClick={hideDrawer} className="drawer-side z-50"> {/* Ensure drawer is above content */}
+                    <div onClick={hideDrawer} className="drawer-side z-50 "> {/* Ensure drawer is above content */}
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={hideDrawer}></label>
-                        <ul className="menu dark:bg-base-200 bg-slate-200 text-base-content min-h-full w-56 p-4">
+                        <ul className="menu dark:bg-base-200 bg-slate-400 text-base-content min-h-full w-56 p-4 ">
                             <li className="w-fit mb-4">
                                 <button onClick={hideDrawer} className="absolute right-2 z-50">
                                     <AiFillCloseCircle size={24} />
                                 </button>
                             </li>
                             <div className='flex flex-col justify-center items-center gap-3 font-bold text-black dark:text-white costomization'>
-                                <li>
+                                <li className='fill-left-to-right w-full'>
                                     <Link to={'/profile'} onClick={hideDrawer}>Home</Link>
                                 </li>
-                                <li>
+                                <li className='fill-left-to-right w-full'>
                                     <Link to={"/Skills"} onClick={hideDrawer}>Skills</Link>
                                 </li>
-                                <li>
+                                <li className='fill-left-to-right w-full'>
                                     <Link to={"/projects"} onClick={hideDrawer}>Projects</Link>
                                 </li>
-                                <li>
+                                <li className='fill-left-to-right w-full'>
                                     <Link to={"/certificates"} onClick={hideDrawer}>Certificates</Link>
                                 </li>
-                                <li>
+                                <li className='fill-left-to-right w-full'>
+                                    <Link to={"/blog"} onClick={hideDrawer}>blog</Link>
+                                </li>
+                                <li className='fill-left-to-right w-full'>
                                     <Link to={"/contact"} onClick={hideDrawer}>Contact</Link>
                                 </li>
-                                <li onClick={hideDrawer} className='text-2xl'>
+                                <li onClick={hideDrawer} className='text-2xl fill-left-to-right'>
                                     <Toggel darkMode={darkMode} toggelChange={toggleChange} />
                                 </li>
                             </div>
@@ -103,7 +106,7 @@ function Home({ children }) {
                 </div>
                 <div>
                     <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
-                        <Link to={'/'}>
+                        <Link to={'/profile'}>
                             <FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' />
                         </Link>
                         Portfolio

@@ -9,7 +9,7 @@ function Skills() {
             <section id='Skills' className="bg-slate-200 w-full h-full dark:bg-slate-900 py-10">
                 <div className="skills-wrapper max-w-4xl mx-auto px-4">
                     {/* <h1 className="text-center text-4xl font-bold mb-8 text-gray-800 dark:text-gray-200 pb-10">Skills</h1> */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {skillsData.map((skill, index) => (
                             <div key={index} className="skill-box bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
                                 <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">{skill.name}</h2>

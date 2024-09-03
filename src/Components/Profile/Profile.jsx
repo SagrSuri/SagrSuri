@@ -34,9 +34,9 @@ function Profile() {
               </h1>
             </div>
             <div>
-              <h2 className='text-4xl font-bold text-center pb-6 text-slate-600 dark:text-slate-300'> I am a <TypingAnimation text={profileData.title} />
+              <h2 className='lg:text-4xl xl:text-4xl sm:text-xl md:text-xl font-bold text-center pb-6 text-slate-600 dark:text-slate-300'> I am a <TypingAnimation text={profileData.title} />
               </h2>
-              <p className='text-xl text-center font-serif text-slate-600 dark:text-slate-300 mb-2'>
+              <p className='lg:text-xl md:text-xl lg:text-center md:text-center sm:text-justify sm:text-[1rem] font-serif text-slate-600 dark:text-slate-300 mb-2'>
                 {profileData.description}
               </p>
             </div>
