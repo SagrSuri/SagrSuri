@@ -6,6 +6,7 @@ import { IoSend } from 'react-icons/io5';
 import Home from '../Home/Home';
 import contactData from './contactData'; // Import the contact data
 import { toast } from 'react-hot-toast'; // Import toast
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ function Contact() {
     message: '',
   });
   const [formErrors, setFormErrors] = useState({});
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,6 +24,10 @@ function Contact() {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
   };
 
   const validateEmail = (email) => {
@@ -42,6 +49,9 @@ function Contact() {
     if (!formData.message) {
       errors.message = 'Please enter your message.';
     }
+    if (!captchaValue) {
+      errors.captcha = 'Please complete the CAPTCHA.';
+    }
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       Object.values(errors).forEach((error) => toast.error(error)); // Show error messages
@@ -49,10 +59,10 @@ function Contact() {
     }
 
     // Send email
-    emailjs.sendForm(
+    emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      e.target,
+      formData,
       import.meta.env.VITE_EMAILJS_USER_ID
     )
     .then((result) => {
@@ -63,10 +73,13 @@ function Contact() {
         message: '',
       });
       setFormErrors({});
+      setCaptchaValue(null);
+      setStatus('Message sent successfully!');
       toast.success('Message sent successfully!'); // Show success message
     })
     .catch((error) => {
-      console.error('Error sending email:', error.text);
+      console.error('Error sending email:', error);
+      setStatus('Failed to send message.');
       toast.error('Something went wrong! Please use the email below to send your message.'); // Show failure message
     });
   };
@@ -76,7 +89,7 @@ function Contact() {
       <section id="Contact" className='w-full min-h-screen p-4 bg-gray-200 dark:bg-slate-900'>
         <div className="flex flex-col md:flex-row items-center justify-center dark:bg-[#4d2363b3] bg-slate-400 rounded-2xl mx-auto max-w-screen-lg overflow-hidden shadow-custom border-2 border-black dark:border-white">
           {/* Contact Info Section */}
-          <div className="flex-1 p-8 bg-secondary text-white dark:bg-[#572400a7]">
+          <div className="flex-1 p-8 bg-secondary text-white dark:bg-[#5d05c9]">
             <h1 className="text-2xl font-bold mb-4">Let's get in touch</h1>
             <h2 className="text-lg font-medium mb-4">Open for any suggestion or to have a discussion</h2>
             <div className="w-full h-64 mt-5">
@@ -87,17 +100,17 @@ function Contact() {
               />
             </div>
             <div className="flex flex-col px-4 mt-6">
-              <span className="flex items-center mb-4 text-sm font-medium">
-                <i className="fa-solid fa-location-dot text-lg mr-2 border border-white rounded-full p-1"></i>
+              <span className="flex items-center mb-4 text-xl font-serif font-medium">
+                <i className="fa-solid fa-location-dot text-lg mr-2 border border-white bg-black p-1"></i>
                 {contactData.location}
               </span>
-              <span className="flex items-center mb-4 text-sm font-medium">
-                <i className="fa-solid fa-phone text-lg mr-2 border border-white rounded-full p-1"></i>
+              <span className="flex items-center mb-4 text-xl font-serif font-medium">
+                <i className="fa-solid fa-phone text-lg mr-2 border border-white bg-black p-1"></i>
                 {contactData.phone}
               </span>
               <span className="flex items-center mb-4 text-sm font-medium">
-                <i className="fa-solid fa-envelope text-lg mr-2 border border-white rounded-full p-1"></i>
-                <a href={`mailto:${contactData.email}`} className="text-blue-500 dark:text-blue-300">
+                <i className="fa-solid fa-envelope text-lg mr-2 border border-white bg-black p-1"></i>
+                <a href={`mailto:${contactData.email}`} className="text-[#00ffcc] text-xl font-serif dark:text-white">
                   {contactData.email}
                 </a>
               </span>
@@ -105,7 +118,7 @@ function Contact() {
           </div>
 
           {/* Contact Form Section */}
-          <div className="flex-1 p-8 bg-white dark:bg-[#45451a] my-7 mx-4 rounded-lg shadow-lg">
+          <div className="flex-1 sm:w-[90%] md:w-[90%] p-8 bg-white dark:bg-[#5cc7ae] my-7 mx-4 rounded-e-badge shadow-lg">
             <h1 className="text-2xl font-semibold mb-4 text-black dark:text-white">Fill out the form</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
@@ -117,7 +130,7 @@ function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full text-sm px-3 py-4 rounded-lg border-2 ${formErrors.name ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
+                  className={`w-full px-3 py-3 dark:bg-slate-800 rounded-lg border-2 ${formErrors.name ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
                 />
                 {formErrors.name && <span className="text-red-500 text-sm">{formErrors.name}</span>}
               </div>
@@ -130,7 +143,7 @@ function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full text-sm px-3 py-4 rounded-lg border-2 ${formErrors.email ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
+                  className={`w-full px-3 py-3 dark:bg-slate-800 rounded-lg border-2 ${formErrors.email ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
                 />
                 {formErrors.email && <span className="text-red-500 text-sm">{formErrors.email}</span>}
               </div>
@@ -142,9 +155,16 @@ function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full text-sm px-3 py-4 rounded-lg border-2 ${formErrors.message ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none min-h-32 bg-white dark:bg-gray-700 dark:border-gray-600`}
+                  className={`w-full px-3 py-3 dark:bg-slate-800 rounded-lg border-2 ${formErrors.message ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none min-h-32 bg-white dark:bg-gray-700 dark:border-gray-600`}
                 ></textarea>
                 {formErrors.message && <span className="text-red-500 text-sm">{formErrors.message}</span>}
+              </div>
+              <div className='w-full flex justify-center'>
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={handleCaptchaChange}
+                  className="my-2"
+                />
               </div>
               <button
                 type="submit"
@@ -153,6 +173,7 @@ function Contact() {
                 Send Message <IoSend className="ml-2" />
               </button>
             </form>
+            {status && <p className="text-center mt-2">{status}</p>}
           </div>
         </div>
       </section>
