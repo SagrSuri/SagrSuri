@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import Footer from '../Footer/Footer';
 import Toggel from '../Toggel/Toggel';
@@ -77,8 +77,19 @@ function Home({ children }) {
                             </li>
                             <div className='flex flex-col justify-center items-center gap-3 font-bold text-black dark:text-white costomization'>
                                 {links.map((link, index) => (
-                                    <li key={index} className='fill-left-to-right w-full'>
-                                        <Link to={link.to} onClick={hideDrawer}>{link.label}</Link>
+                                    <li key={index} className={`fill-left-to-right w-full py-2 px-4 rounded-full text-center ${window.location.pathname === link.to
+                                        ? darkMode
+                                            ? 'bg-[#0400ff] text-white'
+                                            : 'bg-[#0af899dc] text-black'
+                                        : 'text-black dark:text-white'
+                                    }`}>
+                                        <NavLink
+                                            to={link.to}
+                                            onClick={hideDrawer}
+                                            className="w-full"
+                                        >
+                                            {link.label}
+                                        </NavLink>
                                     </li>
                                 ))}
                                 <li onClick={hideDrawer} className='text-2xl fill-left-to-right'>
