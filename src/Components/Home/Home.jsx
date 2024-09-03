@@ -19,6 +19,7 @@ function Home({ children }) {
         const savedMode = localStorage.getItem('darkMode');
         return savedMode ? JSON.parse(savedMode) : false;
     });
+
     useEffect(() => {
         if (darkMode) {
             document.documentElement.classList.add('dark');
@@ -67,17 +68,17 @@ function Home({ children }) {
                         </label>
                     </div>
                     
-                    <div onClick={hideDrawer} className="drawer-side z-50">
+                    <div  className="drawer-side z-50">
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={hideDrawer}></label>
-                        <ul className="menu dark:bg-base-200 bg-slate-400 text-base-content min-h-full w-56 p-4 ">
-                            <li className="w-fit mb-4">
-                                <button onClick={hideDrawer} className="absolute right-2 z-50">
-                                    <AiFillCloseCircle size={24} />
+                        <ul className="menu dark:bg-base-200 bg-slate-400 text-base-content min-h-full w-64 p-4 relative">
+                            <li className="my-3 w-full content-center">
+                                <button onClick={hideDrawer} className="dark:text-[blue] text-[#00190e] z-50">
+                                    <AiFillCloseCircle size={30} />
                                 </button>
                             </li>
-                            <div className='flex flex-col justify-center items-center gap-3 font-bold text-black dark:text-white costomization'>
+                            <div className='flex flex-col justify-center items-center gap-3 font-bold text-black dark:text-white customization'>
                                 {links.map((link, index) => (
-                                    <li key={index} className={`fill-left-to-right w-full py-2 px-4 rounded-full text-center ${window.location.pathname === link.to
+                                    <li key={index} className={`fill-left-to-right w-36 py-1 px-4 rounded-full border-[1px] border-black dark:border-white text-center ${window.location.pathname === link.to
                                         ? darkMode
                                             ? 'bg-[#0400ff] text-white'
                                             : 'bg-[#0af899dc] text-black'
@@ -86,7 +87,7 @@ function Home({ children }) {
                                         <NavLink
                                             to={link.to}
                                             onClick={hideDrawer}
-                                            className="w-full"
+                                             className="flex justify-center w-full"
                                         >
                                             {link.label}
                                         </NavLink>
@@ -100,7 +101,7 @@ function Home({ children }) {
                     </div>
                 </div>
                 <div>
-                    <h1 className='font-bold text-2xl flex justify-center items-center gap-1'>
+                    <h1 className='font-bold text-2xl flex justify-center items-center gradient-text gap-1'>
                         <Link to={'/profile'}>
                             <FaHandshake className='text-4xl text-pink-600 dark:text-orange-500 cursor-pointer' />
                         </Link>
@@ -112,7 +113,7 @@ function Home({ children }) {
                 <Navbar darkMode={darkMode} toggelChange={toggleChange} />
             </div>
             <div className='flex-grow z-10'>
-                {children ? children : <Welcome/> }
+                {children ? children : <Welcome darkMode={darkMode} toggelChange={toggleChange} />}
             </div>
             <div className='relative'>
                 <Footer />
