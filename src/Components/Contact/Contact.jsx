@@ -31,14 +31,12 @@ function Contact() {
   };
 
   const validateEmail = (email) => {
-    // Basic email validation regex
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate form data
     const errors = {};
     if (!formData.name) {
       errors.name = 'Please enter your name.';
@@ -54,11 +52,10 @@ function Contact() {
     }
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
-      Object.values(errors).forEach((error) => toast.error(error)); // Show error messages
+      Object.values(errors).forEach((error) => toast.error(error));
       return;
     }
 
-    // Send email
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -75,91 +72,88 @@ function Contact() {
       setFormErrors({});
       setCaptchaValue(null);
       setStatus('Message sent successfully!');
-      toast.success('Message sent successfully!'); // Show success message
+      toast.success('Message sent successfully!');
     })
     .catch((error) => {
       console.error('Error sending email:', error);
       setStatus('Failed to send message.');
-      toast.error('Something went wrong! Please use the email below to send your message.'); // Show failure message
+      toast.error('Something went wrong! Please use the email below to send your message.');
     });
   };
 
   return (
     <Home>
-      <section id="Contact" className='w-full min-h-screen p-4 bg-gray-200 dark:bg-slate-900'>
-        <div className="flex flex-col md:flex-row items-center justify-center dark:bg-[#4d2363b3] bg-slate-400 rounded-2xl mx-auto max-w-screen-lg overflow-hidden shadow-custom border-2 border-black dark:border-white">
+      <section id="Contact" className="w-full min-h-screen p-4 bg-gray-100 dark:bg-gray-800">
+        <div className="flex flex-col md:flex-row items-center justify-center bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-300 dark:border-gray-700 max-w-screen-lg mx-auto overflow-hidden">
           {/* Contact Info Section */}
-          <div className="flex-1 p-8 bg-secondary text-white dark:bg-[#5d05c9]">
-            <h1 className="text-2xl font-bold mb-4">Let's get in touch</h1>
-            <h2 className="text-lg font-medium mb-4">Open for any suggestion or to have a discussion</h2>
-            <div className="w-full h-64 mt-5">
+          <div className="flex-1 p-8 text-gray-800 dark:text-gray-200">
+            <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Let's Get In Touch</h1>
+            <p className="text-lg mb-4">I'm open for any suggestions or discussions.</p>
+            <div className="w-full h-64 mb-6">
               <img
                 src={contactData.imageUrl}
                 alt="Contact"
-                className="block mx-auto w-full h-full rounded-xl object-cover"
+                className="w-full h-full object-cover rounded-xl shadow-md"
               />
             </div>
-            <div className="flex flex-col px-4 mt-6">
-              <span className="flex items-center mb-4 text-xl font-serif font-medium">
-                <i className="fa-solid fa-location-dot text-lg mr-2 border border-white bg-black p-1"></i>
+            <div className="space-y-4">
+              <div className="flex items-center text-lg">
+                <i className="fa-solid fa-location-dot text-teal-500 mr-2"></i>
                 {contactData.location}
-              </span>
-              <span className="flex items-center mb-4 text-xl font-serif font-medium">
-                <i className="fa-solid fa-phone text-lg mr-2 border border-white bg-black p-1"></i>
+              </div>
+              <div className="flex items-center text-lg">
+                <i className="fa-solid fa-phone text-teal-500 mr-2"></i>
                 {contactData.phone}
-              </span>
-              <span className="flex items-center mb-4 text-sm font-medium">
-                <i className="fa-solid fa-envelope text-lg mr-2 border border-white bg-black p-1"></i>
-                <a href={`mailto:${contactData.email}`} className="text-[#00ffcc] text-xl font-serif dark:text-white">
+              </div>
+              <div className="flex items-center text-lg">
+                <i className="fa-solid fa-envelope text-teal-500 mr-2"></i>
+                <a href={`mailto:${contactData.email}`} className="text-teal-600 dark:text-teal-400">
                   {contactData.email}
                 </a>
-              </span>
+              </div>
             </div>
           </div>
 
           {/* Contact Form Section */}
-          <div className="flex-1 sm:w-[90%] md:w-[90%] p-8 bg-white dark:bg-[#5cc7ae] my-7 mx-4 rounded-e-badge shadow-lg">
-            <h1 className="text-2xl font-semibold mb-4 text-black dark:text-white">Fill out the form</h1>
+          <div className="flex-1 p-8 bg-gray-50 dark:bg-gray-700 shadow-md border border-gray-300 dark:border-gray-700">
+            <h1 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Fill Out The Form</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="relative">
-                {/* <i className="fa-solid fa-user text-lg text-secondary absolute top-4 left-4"></i> */}
+              <div>
                 <input
                   type="text"
                   name="name"
-                  placeholder="Your name"
+                  placeholder="Your Name"
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-3 py-3 dark:bg-slate-800 rounded-lg border-2 ${formErrors.name ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
+                  className={`w-full px-4 py-2 bg-transparent dark:bg-black border rounded-lg ${formErrors.name ? 'border-red-500' : 'border-gray-300'} dark:${formErrors.name ? 'border-red-500' : 'border-gray-600'} focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400`}
                 />
                 {formErrors.name && <span className="text-red-500 text-sm">{formErrors.name}</span>}
               </div>
-              <div className="relative">
-                {/* <i className="fa-solid fa-envelope text-lg text-secondary absolute top-4 left-4"></i> */}
+              <div>
                 <input
                   type="email"
                   name="email"
-                  placeholder="Your email"
+                  placeholder="Your Email"
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-3 py-3 dark:bg-slate-800 rounded-lg border-2 ${formErrors.email ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none bg-white dark:bg-gray-700 dark:border-gray-600`}
+                  className={`w-full px-4 py-2 bg-transparent dark:bg-black border rounded-lg ${formErrors.email ? 'border-red-500' : 'border-gray-300'} dark:${formErrors.email ? 'border-red-500' : 'border-gray-600'} focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400`}
                 />
                 {formErrors.email && <span className="text-red-500 text-sm">{formErrors.email}</span>}
               </div>
-              <div className="relative">
-                {/* <i className="fa-solid fa-message text-lg text-secondary absolute top-4 left-4"></i> */}
+              <div>
                 <textarea
                   name="message"
-                  placeholder="Leave your message here"
+                  placeholder="Your Message"
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-3 py-3 dark:bg-slate-800 rounded-lg border-2 ${formErrors.message ? 'border-red-500' : 'border-primary-light-2'} focus:border-secondary outline-none min-h-32 bg-white dark:bg-gray-700 dark:border-gray-600`}
+                  className={`w-full px-4 py-2 bg-transparent dark:bg-black border rounded-lg ${formErrors.message ? 'border-red-500' : 'border-gray-300'} dark:${formErrors.message ? 'border-red-500' : 'border-gray-600'} focus:outline-none focus:ring-2 focus:ring-teal-500 dark:focus:ring-teal-400 min-h-[150px]`}
                 ></textarea>
                 {formErrors.message && <span className="text-red-500 text-sm">{formErrors.message}</span>}
               </div>
-              <div className='w-full flex justify-center'>
+              <div className="w-full flex justify-center">
                 <ReCAPTCHA
                   sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                   onChange={handleCaptchaChange}
@@ -168,12 +162,12 @@ function Contact() {
               </div>
               <button
                 type="submit"
-                className="text-sm font-medium py-4 rounded-lg w-full cursor-pointer text-white bg-secondary-light border border-secondary-light transition-colors duration-200 hover:bg-secondary hover:border-secondary flex items-center justify-center"
+                className="w-full py-3 bg-teal-500 text-white rounded-lg font-medium transition-transform transform hover:scale-105 hover:bg-teal-600 dark:bg-teal-600 dark:hover:bg-teal-500"
               >
-                Send Message <IoSend className="ml-2" />
+                Send Message <IoSend className="inline-block ml-2 text-lg" />
               </button>
             </form>
-            {status && <p className="text-center mt-2">{status}</p>}
+            {status && <p className="mt-2 text-center text-gray-900 dark:text-gray-100">{status}</p>}
           </div>
         </div>
       </section>

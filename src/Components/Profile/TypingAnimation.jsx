@@ -22,7 +22,7 @@ const TypingAnimation = ({ text, speed = 200 }) => {
     return () => clearInterval(timer);
   }, [index, text, speed]);
 
-  return <span className='gradient-text lg:text-4xl xl:text-4xl sm:text-xl md:text-xl '>{displayText}</span>;
+  return <span className='gradient-text font-semibold lg:text-4xl xl:text-4xl sm:text-xl md:text-xl '>{displayText}</span>;
 };
 
 export default TypingAnimation;
