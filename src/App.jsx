@@ -4,7 +4,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import NotFound from './NotFound';
 import Skills from './Components/Skills/Skills';
-// import Blog from './Components/Blog/Blog';
+import Blog from './Components/Blog/Blog';
 import Certificates from './Components/Certificates/Certificates';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
@@ -13,6 +13,7 @@ import Loader from './Components/Loader/Loader';
 import ProgressBar from './Components/ProgressBar/ProgressBar'; // Import the ProgressBar component
 import { Toaster } from 'react-hot-toast';
 import Meta from './Components/Meta/Meta'; // Import the Meta component
+import BlogDetail from './Components/Blog/BlogDetail';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -39,6 +40,8 @@ function App() {
         return 'projects';
       case '/certificates':
         return 'certificates';
+      case '/blog':
+        return 'blog';
       case '/contact':
         return 'contact';
       default:
@@ -59,7 +62,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/skills' element={<Skills />} />
-          {/* <Route path='/blog' element={<Blog />} /> */}
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/blog/:id' element={<BlogDetail />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/certificates' element={<Certificates />} />
           <Route path='/contact' element={<Contact />} />
