@@ -7,7 +7,11 @@ const profileData = {
   // Use a local or an external link for the profile image
   image: 'https://res.cloudinary.com/sagarsuri/image/upload/f_auto,q_auto/sagarsuri', // Update this to the correct path or URL
   name: 'SAGAR SURI',
-  title: 'Full Stack Web Developer',
+  titles: [
+    'Front End Developer',
+    'Backend Developer',
+    'Full Stack Web Developer'
+  ],
   description: `Hello, I’m Sagar Suri, a dedicated web developer with extensive expertise in both frontend and backend technologies. My journey in web development has been driven by a passion for creating dynamic, high-performance web applications.
 
   With a strong foundation in React.js and Node.js, I excel in building scalable solutions that meet complex requirements. My proficiency in UI/UX design ensures that each project is not only functional but also provides an exceptional user experience.

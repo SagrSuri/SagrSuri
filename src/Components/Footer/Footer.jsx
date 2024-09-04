@@ -4,7 +4,7 @@ import { socialMediaLinks } from './socialMediaLinks'; // Adjust the path if nec
 
 function Footer() {
     return (
-        <footer className="w-full bg-slate-300 dark:bg-gray-950 text-gray-800 dark:text-gray-200 py-4">
+        <footer className="w-full bg-gray-300 dark:bg-slate-950 dark:text-gray-200 py-4">
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-col md:flex-row justify-between items-center px-6 space-y-6 sm:space-y-4 md:space-y-0">
                 
                 {/* Branding */}
@@ -15,7 +15,7 @@ function Footer() {
                 </div>
 
                 {/* Social Media Links */}
-                <div className="flex space-x-4 md:space-x-4 sm:space-x-2">
+                <div className="flex space-x-3 xm:space-x-2 md:space-x-3 sm:space-x-2">
                     {socialMediaLinks.map((link) => (
                         <a
                             key={link.id}
@@ -25,11 +25,11 @@ function Footer() {
                             aria-label={link.label}
                             className="group relative overflow-hidden"
                         >
-                            <div className="relative w-10 h-10 sm:w-8 sm:h-8 md:w-12 md:h-12 flex items-center justify-center bg-gradient-to-br from-teal-400 to-cyan-600 dark:from-teal-500 dark:to-cyan-700 rounded-sm shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                            <div className="relative w-10 h-10 sm:w-8 sm:h-8 md:w-10 md:h-10 flex items-center justify-center bg-gradient-to-br from-teal-400 to-cyan-600 dark:from-teal-500 dark:to-cyan-700 rounded-sm shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
                                 <img
                                     src={link.imageSrc}
                                     alt={link.alt}
-                                    className="w-6 h-6 sm:w-5 sm:h-5 md:w-7 md:h-7"
+                                    className="w-6 h-6 xm:w-4 xm:h-4 sm:w-5 sm:h-5 md:w-7 md:h-7"
                                 />
                             </div>
                             <span className="absolute inset-0 rounded-full bg-gradient-to-br from-teal-400 to-cyan-600 dark:from-teal-500 dark:to-cyan-700 opacity-0 group-hover:opacity-50 transition-opacity duration-300 blur-lg"></span>

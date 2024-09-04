@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'sm': '350px', // Small screens (mobile)
+        'xm': '350px', // Small screens (mobile)
+        'sm': '640px', // Small screens (mobile)
         'md': '768px', // Medium screens (tablets)
         'lg': '1024px', // Large screens (desktops)
         'xl': '1280px', // Extra large screens

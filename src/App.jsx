@@ -14,6 +14,8 @@ import ProgressBar from './Components/ProgressBar/ProgressBar'; // Import the Pr
 import { Toaster } from 'react-hot-toast';
 import Meta from './Components/Meta/Meta'; // Import the Meta component
 import BlogDetail from './Components/Blog/BlogDetail';
+import Navbar from './Components/Navbar/Navbar';
+import Toggle from './Components/Toggle/Toggle';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -49,8 +51,10 @@ function App() {
     }
   };
 
+
+
   return (
-    <div className='dark:bg-slate-950 text-black dark:text-white bg-slate-50'>
+    <div className='dark:bg-gray-900 bg-gray-200 text-slate-950 dark:text-slate-50'>
       <Meta page={getPageName()} /> {/* Set meta tags based on current page */}
       <ProgressBar /> {/* Add ProgressBar component */}
       <Toaster/>
@@ -59,7 +63,7 @@ function App() {
       ) : (
         <Routes>
           <Route path='/*' element={<NotFound />} />
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home/>} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/skills' element={<Skills />} />
           <Route path='/blog' element={<Blog />} />
@@ -68,6 +72,8 @@ function App() {
           <Route path='/projects' element={<Projects />} />
           <Route path='/certificates' element={<Certificates />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/navbar' element={<Navbar/>} />
+          <Route path='/toggle' element={<Toggle/>} />
         </Routes>
       )}
     </div>
