@@ -1,8 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 
-// eslint-disable-next-line react/prop-types
-function Welcome({ darkMode }) {
+function Welcome() {
+  const [darkMode, setDarkMode] = useState(() => {
+    return JSON.parse(localStorage.getItem('darkMode')) || false;
+  });
+  
   const [imageUrl, setImageUrl] = useState('');
 
   const externalImageUrlComputerDark = 'https://img.freepik.com/premium-photo/word-welcome-isolated-white-background-made-uncial-calligraphy-style_107173-64339.jpg?w=826';
@@ -13,8 +16,7 @@ function Welcome({ darkMode }) {
 
   useEffect(() => {
     const updateBackgroundImage = () => {
-      const isMobileOrTablet = window.innerWidth < 768; // Adjust this width as needed
-
+      const isMobileOrTablet = window.innerWidth < 768;
       let selectedImageUrl;
 
       if (isMobileOrTablet) {
@@ -26,22 +28,35 @@ function Welcome({ darkMode }) {
       setImageUrl(selectedImageUrl);
     };
 
+    // Update background image on mode change or window resize
     updateBackgroundImage();
 
-    // Listen for changes in the window's size
     window.addEventListener('resize', updateBackgroundImage);
+    return () => window.removeEventListener('resize', updateBackgroundImage);
 
-    // Cleanup listener on component unmount
-    return () => {
-      window.removeEventListener('resize', updateBackgroundImage);
-    };
-  }, [darkMode]); // Include darkMode in the dependency array
+  }, [darkMode]); // Dependency on darkMode ensures update on mode change
+
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => {
+      const newMode = !prevMode;
+      localStorage.setItem('darkMode', JSON.stringify(newMode));
+      return newMode;
+    });
+  };
 
   return (
-    <div
-      className="flex justify-center items-center align-middle h-[80vh] bg-cover bg-center"
-      style={{ backgroundImage: `url(${imageUrl})` }}
-    >
+    <div>
+      <button
+        onClick={toggleDarkMode}
+        className="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded"
+      >
+        Toggle Dark Mode
+      </button>
+      <div
+        className="flex justify-center items-center h-[80vh] bg-cover bg-center"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      >
+      </div>
     </div>
   );
 }

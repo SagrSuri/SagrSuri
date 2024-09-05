@@ -65,7 +65,7 @@ function Navbar() {
                                         </NavLink>
                                     </li>
                                 ))}
-                                <li onClick={hideDrawer} className='text-2xl fill-left-to-right'>
+                                <li className='text-2xl fill-left-to-right'>
                                     <Toggle />
                                 </li>
                             </div>
