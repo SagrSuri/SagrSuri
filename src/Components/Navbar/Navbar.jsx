@@ -45,7 +45,7 @@ function Navbar() {
                     </div>
                     <div className="drawer-side z-50">
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay" onClick={hideDrawer}></label>
-                        <ul className="menu dark:bg-base-300 bg-gray-300 text-base-content min-h-full w-64 p-4 relative">
+                        <ul className="menu dark:bg-gray-800 bg-gray-300 text-base-content min-h-full w-64 p-4 relative">
                             <li className="my-3 w-full content-center">
                                 <button onClick={hideDrawer} className="text-2xl text-[#00190e] dark:text-blue-500 z-50">
                                     <AiFillCloseCircle size={30} />

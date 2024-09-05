@@ -15,7 +15,7 @@ function Footer() {
                 </div>
 
                 {/* Social Media Links */}
-                <div className="flex space-x-3 xm:space-x-2 md:space-x-3 sm:space-x-2">
+                <div className="flex space-x-3 xm:space-x-1 md:space-x-2 sm:space-x-2">
                     {socialMediaLinks.map((link) => (
                         <a
                             key={link.id}
