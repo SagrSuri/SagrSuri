@@ -6,6 +6,7 @@ import { links } from '../Home/linkData.js';
 import { FiMenu } from 'react-icons/fi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import Toggle from '../Toggle/Toggle.jsx';
+// import Toggle from 'vitetoggle'
 
 function Navbar() {
     function changeWidth() {
