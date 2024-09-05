@@ -21,8 +21,6 @@ const Meta = ({ page = 'home' }) => {
       <meta property="og:description" content={openGraph?.description || description || 'Default Description'} />
       <meta property="og:image" content={openGraph?.image || '/default-image.png'} />
       <meta property="og:url" content={openGraph?.url || window.location.href} />
-      <meta name="google-site-verification" content="-wS-5HDqttX_wZKQxmQRqRgjdk952T_5Rays1o5XezM" />
-
       {/* Twitter Card meta tags */}
       <meta name="twitter:title" content={twitter?.title || title || 'Default Title'} />
       <meta name="twitter:description" content={twitter?.description || description || 'Default Description'} />
