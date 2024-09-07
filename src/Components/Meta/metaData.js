@@ -1,4 +1,9 @@
 import sagarImage from '../../assets/sagarImage.jpg'; // Path to your favicon or main image
+import certificateFavicon from './favicons/certificate.png'
+import contactfavicon from './favicons/contact.png'
+import skillsfavicon from './favicons/skills.png'
+import projectfavicon from './favicons/project.png'
+import blogfavicon from './favicons/blog.png'
 
 const metaData = {
   home: {
@@ -46,7 +51,7 @@ const metaData = {
     title: "Skills - Sagar Suri",
     description: "Discover the skills and technologies Sagar Suri specializes in, including frontend and backend development.",
     keywords: "Sagar Suri, skills, web development, frontend skills, backend skills, React.js, Node.js",
-    favicon: sagarImage, // Use the same or different favicon
+    favicon: skillsfavicon, // Use the same or different favicon
     openGraph: {
       title: "Sagar Suri - Skills",
       description: "Detailed overview of skills and technologies.",
@@ -63,7 +68,7 @@ const metaData = {
     title: "Projects - Sagar Suri",
     description: "Explore the projects that Sagar Suri has worked on, showcasing frontend and backend expertise.",
     keywords: "Sagar Suri, projects, web development projects, React.js, Node.js",
-    favicon: sagarImage, // Use the same or different favicon
+    favicon: projectfavicon, // Use the same or different favicon
     openGraph: {
       title: "Sagar Suri - Projects",
       description: "Showcase of notable projects and contributions.",
@@ -80,7 +85,7 @@ const metaData = {
     title: "Certificates - Sagar Suri",
     description: "View the certificates and qualifications earned by Sagar Suri.",
     keywords: "Sagar Suri, certificates, qualifications, web development certifications",
-    favicon: sagarImage, // Use the same or different favicon
+    favicon: certificateFavicon, // Use the same or different favicon
     openGraph: {
       title: "Sagar Suri - Certificates",
       description: "A list of certifications and qualifications.",
@@ -97,7 +102,24 @@ const metaData = {
     title: "Contact - Sagar Suri",
     description: "Get in touch with Sagar Suri for web development inquiries or opportunities.",
     keywords: "Sagar Suri, contact, web development, get in touch",
-    favicon: sagarImage, // Use the same or different favicon
+    favicon: contactfavicon, // Use the same or different favicon
+    openGraph: {
+      title: "Sagar Suri - Contact",
+      description: "Reach out to Sagar Suri for any queries or projects.",
+      image: sagarImage, // Replace with an image relevant to the contact page
+      url: "https://sagarsuri.in/contact",
+    },
+    twitter: {
+      title: "Sagar Suri - Contact",
+      description: "Contact Sagar Suri for web development opportunities.",
+      image: sagarImage, // Replace with an image relevant to the contact page
+    }
+  },
+  blog: {
+    title: "Blog | PROJECTS DETAILS | SAGAR SURI",
+    description: "Get in touch with Sagar Suri for web development inquiries or opportunities.",
+    keywords: "Blog,Sagar Suri, contact, web development, get in touch",
+    favicon: blogfavicon, // Use the same or different favicon
     openGraph: {
       title: "Sagar Suri - Contact",
       description: "Reach out to Sagar Suri for any queries or projects.",

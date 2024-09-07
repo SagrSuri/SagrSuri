@@ -17,6 +17,7 @@ import BlogDetail from './Components/Blog/BlogDetail';
 import Navbar from './Components/Navbar/Navbar';
 import Toggle from './Components/Toggle/Toggle';
 
+
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation(); // To get the current route
@@ -66,7 +67,6 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/skills' element={<Skills />} />
-          <Route path='/blog' element={<Blog />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/blog/:id' element={<BlogDetail />} />
           <Route path='/projects' element={<Projects />} />

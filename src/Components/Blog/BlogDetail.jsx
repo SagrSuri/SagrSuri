@@ -1,10 +1,10 @@
-// src/BlogDetail.jsx
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import blogData from './blogData';
 import Toggle from 'vitetoggle';
-import GistEmbed from './GistEmbed.jsx';
+import {GistViewer} from 'vite-gist';
+
 
 
 function BlogDetail() {
@@ -23,15 +23,22 @@ function BlogDetail() {
         </button>
         <Toggle />
       </div>
+
+      
       <div className="container mx-auto px-4 py-4">
         <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
         <img src={blog.image} alt={blog.title} className="w-full h-64 object-cover mb-4" />
         <p className="text-gray-600 dark:text-gray-400 mb-4">{blog.content}</p>
 
-        {/* Embed the Gist if present */}
-        {blog.gistId && (
-          <GistEmbed gistId={blog.gistId} />
-        )}
+        <div className='w-full'>
+          <GistViewer
+            gistId={blog.gistId} // Replace with a real Gist ID
+            containerClassName="flex justify-between px-4" //Button Container
+            buttonClassName="px-3 py-2 rounded-sm m-2 bg-slate-300 dark:bg-gray-700" //Button Styling
+            themeStyle="light-theme" // Replace with an actual theme style if needed
+            codeBackgroundColor="#f5f5f5" //try to adding #code
+          />
+        </div>
 
         {/* Embed the YouTube video if present */}
         {blog.youtubeLink && (

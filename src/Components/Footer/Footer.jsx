@@ -2,7 +2,23 @@
 import React from 'react';
 import { socialMediaLinks } from './socialMediaLinks'; // Adjust the path if necessary
 
+// Utility function to determine if the device is mobile
+const isMobile = () => window.innerWidth <= 768;
+
 function Footer() {
+    // Set the correct UPI link based on device type
+    const getUPILink = () => {
+        return isMobile()
+            ? 'upi://pay?pa=sagarsuri@paytm&pn=Sagar&cu=INR'
+            : 'https://razorpay.me/@sagarsuri';
+    };
+
+    // Map through socialMediaLinks and adjust the UPI link
+    const linksWithCorrectUPILink = socialMediaLinks.map((link) => ({
+        ...link,
+        href: link.id === 'UPI' ? getUPILink() : link.href
+    }));
+
     return (
         <footer className="w-full bg-gray-300 dark:bg-slate-950 dark:text-gray-200 py-4">
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-col md:flex-row justify-between items-center px-6 space-y-6 sm:space-y-4 md:space-y-0">
@@ -16,7 +32,7 @@ function Footer() {
 
                 {/* Social Media Links */}
                 <div className="flex space-x-3 xm:space-x-1 md:space-x-2 sm:space-x-2">
-                    {socialMediaLinks.map((link) => (
+                    {linksWithCorrectUPILink.map((link) => (
                         <a
                             key={link.id}
                             href={link.href}
