@@ -15,7 +15,6 @@ import { Toaster } from 'react-hot-toast';
 import Meta from './Components/Meta/Meta'; // Import the Meta component
 import BlogDetail from './Components/Blog/BlogDetail';
 import Navbar from './Components/Navbar/Navbar';
-import Toggle from './Components/Toggle/Toggle';
 import ToggleO from './OwnedComponents/ToggleO';
 
 
@@ -74,8 +73,7 @@ function App() {
           <Route path='/certificates' element={<Certificates />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/navbar' element={<Navbar/>} />
-          <Route path='/toggle' element={<Toggle/>} />
-          <Route path='/toggle1' element={<ToggleO/>} />
+          <Route path='/toggle' element={<ToggleO/>} />
         </Routes>
       )}
     </div>

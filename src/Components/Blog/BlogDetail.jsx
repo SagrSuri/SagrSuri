@@ -41,6 +41,7 @@ function BlogDetail() {
       <div className="container mx-auto px-4 py-4">
         <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
         <img src={blog.image} alt={blog.title} className="w-full h-64 object-cover mb-4" />
+       <Link to={blog.projectLink}><h1 className='text-center bg-green-400 inline my-1 mx-auto w-full font-bold p-1 rounded-md'>VIEW LIVE</h1></Link>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{blog.content}</p>
 
         <div className='w-full'>

@@ -23,6 +23,7 @@ const blogData = [
     gistLink: 'https://gist.github.com/SagrSuri/0606d142d5573cf79f91126bc4ebabc0',
     youtubeLink: 'https://www.youtube.com/embed/qUHokTXF1M0?si=bKt4BEQDQCE9rnfS',
     url: '/blog/my-first-blog-post',
+    projectLink: '/toggle',
   },
  
   // Add more blog objects as needed
