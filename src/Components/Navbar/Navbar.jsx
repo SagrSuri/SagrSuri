@@ -7,6 +7,7 @@ import { FiMenu } from 'react-icons/fi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import Toggle from '../Toggle/Toggle.jsx';
 // import Toggle from 'vitetoggle'
+import ToggleO from '../../OwnedComponents/ToggleO.jsx'
 
 function Navbar() {
     function changeWidth() {
@@ -112,7 +113,8 @@ function Navbar() {
                         ))}
                     </ul>
                     <div className='text-xl'>
-                        <Toggle />
+                        {/* <Toggle /> */}
+                        <ToggleO/>
                     </div>
                 </div>
             </div>
