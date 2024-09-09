@@ -5,7 +5,7 @@ import './Loader.css';
 const Loader = () => {
   return (
     <div className="main-container">
-      <div className="loader">
+      <div className="websiteLoader">
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>

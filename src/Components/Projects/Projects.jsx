@@ -5,6 +5,7 @@ import projectsData from './projectsData';
 import { FaLink } from 'react-icons/fa';
 
 import { SiGithub } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 function Projects() {
     return (
@@ -71,6 +72,9 @@ function Projects() {
                 </div>
               ))}
             </div>
+          </div>
+          <div className='flex w-1/2 mb-3 mt-10 justify-center items-center mx-auto'>
+            <Link className='bg-transparent fill-left-to-right rounded-2xl flex justify-center items-center mx-auto w-auto px-3 py-1 border-[green] dark:border-[blue] border-[1px]' to={'/Projects/MoreProjects'}>More Projects</Link>
           </div>
         </section>
       </Home>

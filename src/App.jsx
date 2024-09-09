@@ -16,6 +16,12 @@ import Meta from './Components/Meta/Meta'; // Import the Meta component
 import BlogDetail from './Components/Blog/BlogDetail';
 import Navbar from './Components/Navbar/Navbar';
 import ToggleO from './OwnedComponents/ToggleO';
+import CrazyArch from './Components/Loaders/CrazyArch/CrazyArch'
+import Cube from './Components/Loaders/Cube/Cube'
+import Hexagonal from './Components/Loaders/Hexagonal/Hexagonal';
+import Rippling from './Components/Loaders/Rippling/Rippling'
+import MoreProjects from './Components/MoreProjects/MoreProjects'
+
 
 
 function App() {
@@ -53,7 +59,6 @@ function App() {
   };
 
 
-
   return (
     <div className='dark:bg-gray-900 bg-gray-200 text-slate-950 dark:text-slate-50'>
       <Meta page={getPageName()} /> {/* Set meta tags based on current page */}
@@ -74,6 +79,16 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/navbar' element={<Navbar/>} />
           <Route path='/toggle' element={<ToggleO/>} />
+
+          {/* *************LOADERS************ */}
+          <Route path='/Projects/MoreProjects/Loaders/CrazyArch' element={<CrazyArch />} />
+          <Route path='/Projects/MoreProjects/Loaders/Cube' element={<Cube />} />
+          <Route path='/Projects/MoreProjects/Loaders/Hexagonal' element={<Hexagonal/>} />
+          <Route path='/Projects/MoreProjects/Loaders/Rippling' element={<Rippling/>} />
+          
+          {/* **********MORE PROJECTS */}
+          <Route path='/Projects/MoreProjects' element={<MoreProjects/>} />
+
         </Routes>
       )}
     </div>

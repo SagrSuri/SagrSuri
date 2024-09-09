@@ -13,6 +13,7 @@ const skillsData = [
     { name: 'MySQL', level: '60%' },
     { name: 'VSCode', level: '95%' },
     { name: 'Postman', level: '70%' },
+    {name: 'ChatGPT' , level: '70%'}
   ];
   
   export default skillsData;

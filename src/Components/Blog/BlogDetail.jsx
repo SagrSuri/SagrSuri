@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import blogData from './blogData';
-import Toggle from 'vitetoggle';
 import {GistViewer} from 'vite-gist';
+import ToggleO from '../../OwnedComponents/ToggleO';
 
 
 
@@ -21,20 +21,7 @@ function BlogDetail() {
         <button>
           <Link to={'/blog'} className='fill-left-to-right px-6 py-1 rounded-s-full text-xl flex justify-center border-[1px] border-black dark:border-white bg-black text-white hover:text-black dark:bg-white dark:text-black dark:hover:text-white'>Back</Link>
         </button>
-        {/* <Toggle /> V.0.0.6 */}
-        <Toggle
-        buttonClass="p-2 relative rounded-full flex flex-col w-8 h-8 m-auto justify-center item-center bg-slate-200 hover:bg-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 shadow-sm shadow-black dark:shadow-white"
-        buttonIconClass="text-[1rem] dark:text-white"
-        dropdownClass="bg-slate-500 absolute dark:bg-slate-900 transition ease-out p-2 space-y-2 rounded-sm m-auto my-2 shadow-sm shadow-slate-700 "
-        dropdownItemClass="flex w-full p-1 justify-center item-center rounded-md"
-        dropdownHoverClass="hover:bg-slate-400 dark:hover:bg-slate-950"
-        lightButtonClass="bg-gray-400 dark:bg-gray-800 flex justify-center gap-2 item-center align-middle"
-        darkButtonClass="bg-gray-400 dark:bg-gray-800 flex justify-center gap-2 item-center align-middle"
-        systemButtonClass="bg-gray-400 dark:bg-gray-800 flex justify-center gap-2 item-center align-middle"
-        lightIconClass="text-black self-center dark:text-white"
-        darkIconClass="text-black self-center dark:text-white"
-        systemIconClass="text-black self-center dark:text-white"
-      />
+        <ToggleO/>
       </div>
 
       
