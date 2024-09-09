@@ -6,6 +6,8 @@ import {GistViewer} from 'vite-gist';
 import ToggleO from '../../OwnedComponents/ToggleO';
 import Back from '../Loaders/Rippling/RipplingBack'
 import { FaGithubAlt, FaGithubSquare } from 'react-icons/fa';
+import { TiSocialYoutube } from 'react-icons/ti';
+import { ImYoutube2 } from 'react-icons/im';
 
 
 function BlogDetail() {
@@ -28,6 +30,10 @@ function BlogDetail() {
       <div className='flex justify-center items-center align-middle p-1 w-full'>
         <Link className='dark:hidden'  to={'/Github'}><FaGithubAlt size={'40px'} /></Link>
         <Link className='hidden dark:block' to={'/Github'}><FaGithubSquare size={'40px'} /></Link>
+      </div>
+      <div className='flex justify-center items-center align-middle p-1 w-full'>
+        <Link className='dark:hidden'  to={'/Youtube'}><TiSocialYoutube size={'40px'} /></Link>
+        <Link className='hidden dark:block' to={'/Youtube'}><ImYoutube2 size={'40px'} /></Link>
       </div>
 
       <div className="container mx-auto px-1 py-4">

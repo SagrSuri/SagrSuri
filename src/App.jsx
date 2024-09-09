@@ -23,6 +23,7 @@ import Rippling from './Components/Loaders/Rippling/Rippling'
 import MoreProjects from './Components/MoreProjects/MoreProjects'
 import GitHub from './Components/GithubProfile/Github';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
+import YouTubeVideo from './Components/YouTube/YouTubeVideo';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -89,6 +90,7 @@ function App() {
           
           {/* **********MORE PROJECTS */}
           <Route path='/Projects/MoreProjects' element={<MoreProjects/>} />
+          <Route path='/YouTube' element={<YouTubeVideo channelName="@SagrSuri" />} />
         </Routes>
       )}
        <ScrollToTop
