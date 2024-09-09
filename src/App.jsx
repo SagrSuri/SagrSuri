@@ -21,6 +21,7 @@ import Cube from './Components/Loaders/Cube/Cube'
 import Hexagonal from './Components/Loaders/Hexagonal/Hexagonal';
 import Rippling from './Components/Loaders/Rippling/Rippling'
 import MoreProjects from './Components/MoreProjects/MoreProjects'
+import GitHub from './Components/GithubProfile/Github';
 
 
 
@@ -79,6 +80,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/navbar' element={<Navbar/>} />
           <Route path='/toggle' element={<ToggleO/>} />
+          <Route path='/github' element={<GitHub />} />
 
           {/* *************LOADERS************ */}
           <Route path='/Projects/MoreProjects/Loaders/CrazyArch' element={<CrazyArch />} />

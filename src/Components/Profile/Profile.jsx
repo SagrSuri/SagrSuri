@@ -35,7 +35,7 @@ function Profile() {
             <h2 className='text-2xl xm:text-[13px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-700 dark:text-slate-200 pb-4 px-4'>
               I am a <TypingAnimation texts={profileData.titles} speed={150} delay={2000} />
             </h2>
-            <p className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-700 dark:text-slate-300 mb-4 px-4 text-justify font-serif'>
+            <p className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-700 dark:text-slate-300 mb-4 px-4 text-justify'>
               {profileData.description}
             </p>
           </div>

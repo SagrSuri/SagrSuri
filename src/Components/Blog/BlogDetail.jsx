@@ -5,6 +5,7 @@ import blogData from './blogData';
 import {GistViewer} from 'vite-gist';
 import ToggleO from '../../OwnedComponents/ToggleO';
 import Back from '../Loaders/Rippling/RipplingBack'
+import { FaGithubAlt, FaGithubSquare } from 'react-icons/fa';
 
 
 function BlogDetail() {
@@ -24,6 +25,10 @@ function BlogDetail() {
         <ToggleO />
       </div>
 
+      <div className='flex justify-center items-center align-middle p-1 w-full'>
+        <Link className='dark:hidden'  to={'/Github'}><FaGithubAlt size={'40px'} /></Link>
+        <Link className='hidden dark:block' to={'/Github'}><FaGithubSquare size={'40px'} /></Link>
+      </div>
 
       <div className="container mx-auto px-1 py-4">
         <h1 className="text-4xl text-center uppercase font-bold mb-6">{blog.title}</h1>
