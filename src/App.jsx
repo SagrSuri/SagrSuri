@@ -22,8 +22,7 @@ import Hexagonal from './Components/Loaders/Hexagonal/Hexagonal';
 import Rippling from './Components/Loaders/Rippling/Rippling'
 import MoreProjects from './Components/MoreProjects/MoreProjects'
 import GitHub from './Components/GithubProfile/Github';
-
-
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -90,9 +89,19 @@ function App() {
           
           {/* **********MORE PROJECTS */}
           <Route path='/Projects/MoreProjects' element={<MoreProjects/>} />
-
         </Routes>
       )}
+       <ScrollToTop
+        color="dark:bg-blue-800"
+        hoverColor="hover:bg-blue-700"
+        darkColor="dark:bg-gray-700"
+        darkHoverColor="dark:hover:bg-gray-900"
+        size="h-8 w-8"
+        textColor="text-white"
+        darkTextColor="dark:text-gray-200"
+        scrollThreshold={100}
+        borderRadius="rounded-full"
+      />
     </div>
   );
 }
