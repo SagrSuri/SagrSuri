@@ -69,6 +69,9 @@ function Navbar() {
                                     </li>
                                 ))}
                                 <li className='fill-left-to-right'>
+                                    <Link to={'/Resume'}>CV</Link>
+                                </li>
+                                <li className='fill-left-to-right'>
                                     <ToggleDark/>
                                 </li>
                             </div>
