@@ -1,8 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import ToggleO from '../../OwnedComponents/ToggleO';
+import ToggleDark from '../../OwnedComponents/ToggleDark';
 import GitHubProfile from './GithubProfile';
 import Back from '../Loaders/Rippling/RipplingBack'
+import { Link } from 'react-router-dom';
 const Github = () => {
   const [username, setUsername] = useState('sagrsuri'); // Default username
 
@@ -16,7 +17,9 @@ const Github = () => {
       <div className='flex justify-center items-center align-middle'>
       <Back/>
       </div>
-      <ToggleO />
+      <div className="py-3">
+      <Link><ToggleDark/></Link>
+      </div>
       <div className="max-w-2xl mx-auto mb-8">
         <input
           type="text"

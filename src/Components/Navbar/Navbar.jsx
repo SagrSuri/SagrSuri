@@ -5,7 +5,8 @@ import { FaHandshake } from 'react-icons/fa';
 import { links } from '../Home/linkData.js';
 import { FiMenu } from 'react-icons/fi';
 import { AiFillCloseCircle } from 'react-icons/ai';
-import Toggle from '../Toggle/Toggle.jsx';
+// import Toggle from '../Toggle/Toggle.jsx';
+import ToggleDark from '../../OwnedComponents/ToggleDark.jsx'
 // import Toggle from 'vitetoggle'
 import ToggleO from '../../OwnedComponents/ToggleO.jsx'
 
@@ -68,7 +69,7 @@ function Navbar() {
                                     </li>
                                 ))}
                                 <li className='fill-left-to-right'>
-                                    <Toggle/>
+                                    <ToggleDark/>
                                 </li>
                             </div>
                         </ul>
