@@ -56,6 +56,8 @@ function App() {
         return 'blog';
       case '/contact':
         return 'contact';
+        case '/resume': // Add resume page title
+        return 'resume';
       default:
         return 'home'; // Default to home or notFound if route is not matched
     }

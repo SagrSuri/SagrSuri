@@ -4,6 +4,7 @@ import contactfavicon from './favicons/contact.png'
 import skillsfavicon from './favicons/skills.png'
 import projectfavicon from './favicons/project.png'
 import blogfavicon from './favicons/blog.png'
+import resumeFavicon from './favicons/resumefavicon.png'
 
 const metaData = {
   home: {
@@ -130,6 +131,24 @@ const metaData = {
       title: "Sagar Suri - Contact",
       description: "Contact Sagar Suri for web development opportunities.",
       image: sagarImage, // Replace with an image relevant to the contact page
+    }
+  },
+  resume: {
+    title: "RESUME - SAGAR SURI - FULL STACK WEB DEVELOPER",
+    description: "I am a passionate and dedicated Full Stack Web Developer with a strong interest in both frontend design and backend development. After completing my graduation, I discovered my enthusiasm for web development and embarked on a journey to master the full stack. I pursued a comprehensive Full Stack Web Development course, where I built several projects that allowed me to apply my skills in real-world scenarios. I have a natural curiosity for how websites function, which drives my continuous learning and improvement. I am highly proficient with my computer, spending much of my time coding, problem-solving, and exploring new technologies. I thrive in environments that challenge my creativity and technical abilities, and I am eager to contribute to innovative web solutions.",
+    keywords: "Resume , Cv , Details , SAGAR SURI , FULL STACK WEB DEVELOPER",
+    favicon: resumeFavicon, // Use the same or different favicon
+    openGraph: {
+      title: "Sagar Suri - Contact",
+      description: "Reach out to Sagar Suri for any queries or projects.",
+      image: sagarImage, // Replace with an image relevant to the contact page
+      url: "https://sagarsuri.in/contact",
+    },
+    twitter: {
+      title: "Sagar Suri - Contact",
+      description: "Contact Sagar Suri for web development opportunities.",
+      image: sagarImage,
+      url: 'https://x.com/sagarsuri_in' // Replace with an image relevant to the contact page
     }
   }
 };

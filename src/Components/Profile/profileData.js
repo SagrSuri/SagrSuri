@@ -1,7 +1,7 @@
 // import profile from '../../assets/sagar-image.jpg';
 // import githubIcon from ''; // Make sure to add actual icons here
 // import linkedinIcon from ''; 
-import pdf from '../../assets/resume.pdf';
+import pdf from '../../assets/RESUME - SAGAR SURI - FULL STACK WEB DEVELOPER.pdf';
 
 const profileData = {
   // Use a local or an external link for the profile image
@@ -12,11 +12,9 @@ const profileData = {
     'Backend Developer',
     'Full Stack Web Developer'
   ],
-  description: `Hello, I’m Sagar Suri, a dedicated web developer with extensive expertise in both frontend and backend technologies. My journey in web development has been driven by a passion for creating dynamic, high-performance web applications.
+  description: `I am a passionate and dedicated Full Stack Web Developer with a strong interest in both frontend design and backend development. After completing my graduation, I discovered my enthusiasm for web development and embarked on a journey to master the full stack. I pursued a comprehensive Full Stack Web Development course, where I built several projects that allowed me to apply my skills in real-world scenarios.
 
-  With a strong foundation in React.js and Node.js, I excel in building scalable solutions that meet complex requirements. My proficiency in UI/UX design ensures that each project is not only functional but also provides an exceptional user experience.
-
-  On this website, you’ll find a comprehensive portfolio showcasing my projects, detailed information about my professional journey, and my CV. Whether you’re interested in collaborative opportunities or exploring my work, I invite you to discover how my skills and innovative approach can contribute to the success of your digital projects.`,
+I have a natural curiosity for how websites function, which drives my continuous learning and improvement. I am highly proficient with my computer, spending much of my time coding, problem-solving, and exploring new technologies. I thrive in environments that challenge my creativity and technical abilities, and I am eager to contribute to innovative web solutions.`,
   buttons: [
     { text: 'Download CV', link: pdf },
     { text: 'Contact', link: 'https://wa.me/8806116794' }

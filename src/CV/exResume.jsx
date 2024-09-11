@@ -138,12 +138,29 @@ function Resume() {
               </ul>
             </div>
 
+
+            {/* <div className="bg-white dark:bg-gray-800 p-6 mb-0 space-y-2 " >
+              <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white uppercase">Certification</h2>
+
+              <ul className='certificateContainer'>
+                <li className='Resumecertificate'>
+                <PiCertificateFill size={'20px'}/><p className='text-[16px] font-semibold'><Link to={'https://sagarsuri.in/assets/certificate-C5t1KhZs.png'}>Full Stack Web Development</Link></p><Link to={'https://pwskills.com/learn/certificate/e21fcd71-ea65-47d2-a716-8422d2e51fbf/'} className='certificateBadge fill-left-to-right'> <MdVerifiedUser />PW SKills</Link>
+                </li>
+                <li className='Resumecertificate'>
+                <PiCertificateFill size={'20px'}/><p className='text-[16px] font-semibold'><Link to={'https://sagarsuri.in/assets/certificateBackend-CW6vmdn9.png'}>Backend Development</Link></p><Link to={'https://pwskills.com/learn/certificate/10edb6ee-2c57-4782-9f38-fe455eb7ff74/'} className='certificateBadge fill-left-to-right'> <MdVerifiedUser />PW SKills</Link>
+                </li>
+                <li className='Resumecertificate'>
+                <PiCertificateFill size={'20px'}/><p className='text-[16px] font-semibold'><Link to={'https://sagarsuri.in/assets/certificatefcc-1bC0C7Ct.jpg'}>Responsive Web Design</Link></p><Link to={'https://www.freecodecamp.org/certification/SAGARSURI/responsive-web-design'} className='certificateBadge fill-left-to-right'> <MdVerifiedUser />FeeCodeCamp</Link>
+                </li>
+              </ul>
+            </div> */}
+
             <div className="page-break"></div>
 
             {/* Education Section with added top margin */}
             <div className="bg-white dark:bg-gray-800 shadow-sm p-6 mb-0" style={{ marginTop: '8px' }}>
               <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white uppercase">Education</h2>
-              <p className="text-gray-700 dark:text-gray-300">Bachelor in Computer Science - RTM University Nagpur (2019 - 2022)</p>
+              <p className="text-gray-700 dark:text-gray-300">Bachelor in Computer Science - RTM University (2019 - 2022)</p>
             </div>
             
 
@@ -168,6 +185,120 @@ function Resume() {
                 ))}
               </ul>
             </div>
+
+
+
+
+            {/* Projects Section
+            <div className="bg-white dark:bg-gray-800 p-6 mb-0">
+              <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white uppercase">Projects</h2>
+              <ul>
+                {resumeData.projects.map((project, index) => (
+                  <li key={index} className="mb-4">
+                    <h3 className="text-lg font-semibold">{project.name}</h3>
+                    <p className="text-gray-700 dark:text-gray-300">{project.description}</p>
+                    <div className="flex items-center gap-2">
+                      <a href={project.link} target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">Live Demo</a>
+                      <span>|</span>
+                      <a href={project.repo} target="_blank" rel="noreferrer" className="text-blue-500 hover:underline"><FaLaptopCode /></a>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div> */}
+
+
+
+            {/* Projects Section */}
+            {/* <div className="bg-white flex flex-col justify-between dark:bg-gray-800 p-6 mb-0 space-y-2 " style={{ marginTop: '10px' }}>
+              <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white uppercase">Projects</h2>
+
+              <p className='flex justify-start items-start align-middle gap-2'>
+                <div className='flex justify-center items-center align-middle gap-3'>
+                <Link to="https://sagarsuri.in" className="text-blue-600 dark:text-blue-400 flex justify-start items-center gap-1 hover:underline" target="_blank" rel="noreferrer">
+                  <TbDeviceImacCode />Portfolio</Link>
+                <Link to={'https://github.com/sagrsuri/sagrsuri'} className=' px-3 text-center rounded-xl border-[1px] border-black hover:bg-black hover:text-white'><FaCodeCommit className='hover:text-green-400' /></Link>
+                </div>
+                    <div className='text-end'>
+                    - Developed a personal portfolio with React, Vite, and Tailwind CSS featuring a modern, responsive design to showcase my skills and projects.
+                    </div>
+              </p>
+              <p className='flex justify-start items-start align-middle gap-2'>
+                <div className='flex justify-center items-center align-middle gap-3'>
+                <Link to="https://www.npmjs.com/package/vite-gist" className="text-blue-600 dark:text-blue-400 flex justify-start items-center gap-1 hover:underline" target="_blank" rel="noreferrer">
+                  <TbDeviceImacCode />vite_gist</Link>
+                <Link to={'https://github.com/sagrsuri/vite-gist'} className=' px-3 text-center rounded-xl border-[1px] border-black hover:bg-black hover:text-white'><FaCodeCommit className='hover:text-green-400' /></Link>
+                </div>
+                <div className='text-end'>
+                - Developed the vite-gist package to seamlessly display GitHub Gists in React applications, with customizable syntax highlighting, dark and light mode support, and Tailwind CSS integration.
+                </div>
+              </p>
+
+              <p className='flex justify-start items-start align-middle gap-2'>
+                <div className='flex justify-center items-center align-middle gap-3'>
+                <Link to="https://www.npmjs.com/package/vitetoggle" className="text-blue-600 dark:text-blue-400 flex justify-start items-center align-middle gap-1 hover:underline" target="_blank" rel="noreferrer">
+                <TbDeviceImacCode/>vitetoggle</Link>
+                <Link to={'https://github.com/sagrsuri/vitetoggle'} className=' px-3 text-center rounded-xl border-[1px] border-black hover:bg-black hover:text-white'><FaCodeCommit className='hover:text-green-400' /></Link>
+                </div>
+                 <div className='text-end'>
+                 - Created the vite-toggle npm package for easy theme switching in React apps, offering customizable toggle functionality for dark mode, light mode, and system preferences with extensive styling options.
+                 </div>
+              </p>
+              <p className='flex justify-start items-start align-middle gap-2'>
+                <div className='flex justify-center items-center align-middle gap-3'>
+                <Link to="https://sagrsuri.github.io/pokemon" className="text-blue-600 dark:text-blue-400 flex justify-start items-center align-middle gap-1 hover:underline" target="_blank" rel="noreferrer">
+                <TbDeviceImacCode/>Pokemon</Link> <Link to={'https://github.com/sagrsuri/pokemon'} className=' px-3 text-center rounded-xl border-[1px] border-black hover:bg-black hover:text-white'><FaCodeCommit className='hover:text-green-400' /></Link> 
+                </div>
+                  <div className='text-end'>
+                  - Developed a Pokémon website using the Pokémon API, built with Vite, and styled with Tailwind CSS for a responsive and modern design.
+                  </div>
+              </p>
+              <p className='flex justify-start items-start align-middle gap-2'>
+                <div className='flex justify-center items-center align-middle gap-3'>
+                <Link to="https://sagrsuri.github.io/youtube" className="text-blue-600 dark:text-blue-400 flex justify-start items-center align-middle gap-1 hover:underline" target="_blank" rel="noreferrer">
+                <TbDeviceImacCode/>YoutubeClone</Link> <Link to={'https://github.com/sagrsuri/youtube'} className=' px-3 text-center rounded-xl border-[1px] border-black hover:bg-black hover:text-white'><FaCodeCommit className='hover:text-green-400' /></Link>
+                </div>
+                 <div className='text-end'>
+                 -Built a YouTube clone using the YouTube API and Vite, featuring a modern and responsive interface.
+                 </div>
+              </p>
+              <p className='flex justify-start items-start align-middle gap-2'>
+                <div className='flex justify-center items-center align-middle gap-3'>
+                <Link to="https://github.com/SagrSuri/LEARNING-SYSTEM-MODULE" className="text-blue-600 dark:text-blue-400 flex justify-start items-center align-middle gap-1 hover:underline" target="_blank" rel="noreferrer">
+                <TbDeviceImacCode/>Learning_System_Module</Link> <Link to={'https://github.com/SagrSuri/LEARNING-SYSTEM-MODULE'} className=' px-3 text-center rounded-xl border-[1px] border-black hover:bg-black hover:text-white'><FaCodeCommit className='hover:text-green-400' /></Link>
+                </div> 
+                <div className='text-end'>
+                - 
+                Developed a full-stack learning management system with Vite and Express.js, including an admin panel, integrated Razorpay payment system, and MongoDB database for efficient course management and transactions.
+                </div>
+              </p>
+            </div> */} 
+
+           
+
+            {/* Page break before Education section */}
+            {/* <div className="page-break"></div> */}
+
+            {/* Experience Section
+            <div className="bg-white dark:bg-gray-800 p-6 mb-0">
+              <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white uppercase">Experience</h2>
+              <ul className="space-y-4">
+                <li>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Web Developer at XYZ Solutions</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">2021 - Present</p>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Developing and maintaining scalable web applications using React, JavaScript, and Vite. Implementing UI/UX design improvements and optimizing application performance.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Frontend Developer Intern at ABC Corp</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">2020 - 2021</p>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Worked on creating reusable components and enhancing the user interface for client projects using React and CSS frameworks. Improved page load time by 20% through optimized asset delivery.
+                  </p>
+                </li>
+              </ul>
+            </div> */}
           </div>
         </div>
       </section>
