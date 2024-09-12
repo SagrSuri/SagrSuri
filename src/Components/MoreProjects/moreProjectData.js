@@ -9,6 +9,12 @@
 
 const projects = [
     {
+      id: 0,
+      title: "View Resume",
+      githubLink: "https://sagarcv.netlify.app/",
+      liveLink: "/resume",
+    },
+    {
       id: 1,
       title: "CrazyArch Loader",
       githubLink: "https://github.com/SagrSuri/SagrSuri/tree/main/src/Components/Loaders/CrazyArch",

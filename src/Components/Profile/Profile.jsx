@@ -5,7 +5,7 @@ import profileData from "./profileData.js";
 import TypingAnimation from './TypingAnimation'
 import { MdFileDownload } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function Profile() {
 
@@ -42,9 +42,9 @@ function Profile() {
           </div>
           <div className='flex justify-center items-center align-middle gap-3 flex-col p-1 pt-6'>
             <p className='flex justify-center items-center font-bold align-middle gap-3 p-1'>
-              <Link to={'/Resume'}  rel='noopener noreferrer' className='flex hover:bg-gray-400 md:block sm:hidden xm:hidden xl:block dark:hover:bg-gray-950 items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent dark:bg-black bg-white'>
+              {/* <Link to={'/Resume'}  rel='noopener noreferrer' className='flex hover:bg-gray-400 md:block sm:hidden xm:hidden xl:block dark:hover:bg-gray-950 items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent dark:bg-black bg-white'>
                 View Cv
-              </Link>
+              </Link> */}
               <a onClick={handleDownloadCV} href={profileData.buttons[0].link} target='_blank' rel='noopener noreferrer' className='flex fill-right-to-left items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent dark:bg-black bg-white'>
                 <MdFileDownload className='mr-2 active:animate-bounce' /> {profileData.buttons[0].text}
               </a>
