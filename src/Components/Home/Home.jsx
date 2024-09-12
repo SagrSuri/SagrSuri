@@ -20,7 +20,7 @@ function Home({ children }) {
         const currentTime = new Date().getTime();
 
         // Time interval (10 seconds in milliseconds)
-        const interval = 5 * 60 * 1000;
+        const interval = 10 * 60 * 1000; // 10 minutes in milliseconds
 
         // Determine which set of images to use based on screen size
         const isMobile = window.matchMedia("(max-width: 768px)").matches;
