@@ -11,7 +11,7 @@ import Contact from './Components/Contact/Contact';
 import Profile from './Components/Profile/Profile';
 import Loader from './Components/Loader/Loader';
 import ProgressBar from './Components/ProgressBar/ProgressBar'; // Import the ProgressBar component
-import { Toaster } from 'react-hot-toast';
+
 import Meta from './Components/Meta/Meta'; // Import the Meta component
 import BlogDetail from './Components/Blog/BlogDetail';
 import Navbar from './Components/Navbar/Navbar';
@@ -68,7 +68,7 @@ function App() {
     <div className='dark:bg-gray-900 bg-gray-200 text-slate-950 dark:text-slate-50'>
       <Meta page={getPageName()} /> {/* Set meta tags based on current page */}
       <ProgressBar /> {/* Add ProgressBar component */}
-      <Toaster/>
+      
       {loading ? (
         <Loader />
       ) : (

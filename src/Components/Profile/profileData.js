@@ -16,7 +16,7 @@ const profileData = {
 
 I have a natural curiosity for how websites function, which drives my continuous learning and improvement. I am highly proficient with my computer, spending much of my time coding, problem-solving, and exploring new technologies. I thrive in environments that challenge my creativity and technical abilities, and I am eager to contribute to innovative web solutions.`,
   buttons: [
-    { text: 'Download CV', link: 'https://sagarcv.netlify.app' }, //pdf
+    { text: 'Download CV', link: 'https://cv.sagarsuri.in/' }, //pdf
     { text: 'Contact', link: 'https://wa.me/8806116794' }
   ],
   socialLinks: [
