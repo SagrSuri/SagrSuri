@@ -5,17 +5,59 @@ import profileData from "./profileData.js";
 import TypingAnimation from './TypingAnimation'
 import { MdFileDownload } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
-// import { Link } from 'react-router-dom';
 import './descriptionData.css'
+import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 function Profile() {
 
+
   // Function to handle CV download
   const handleDownloadCV = (e) => {
-    e.preventDefault(); // Prevent the default anchor click behavior
-    const userConfirmed = window.confirm('Do you want to download the CV?');
-    if (userConfirmed) {
-      window.open(profileData.buttons[0].link, '_blank'); // Open resume in a new tab
+    e.preventDefault(); // Prevent default anchor click behavior
+
+    // Custom toast for confirmation
+    const confirmDownload = () => {
+      toast(
+        (t) => (
+          <div className="toast-content">
+            <p>Do you want to download the CV?</p>
+            <div className="toast-buttons">
+              <button
+                className="btn-confirm"
+                onClick={() => {
+                  handleConfirmDownload(true);
+                  toast.dismiss(t.id); // Close the toast after user confirmation
+                }}
+              >
+                Yes
+              </button>
+              <button
+                className="btn-cancel"
+                onClick={() => {
+                  handleConfirmDownload(false);
+                  toast.dismiss(t.id); // Close the toast if canceled
+                }}
+              >
+                No
+              </button>
+            </div>
+          </div>
+        ),
+        { duration: Infinity }
+      );
+    };
+
+    confirmDownload();
+  };
+
+  // Function to handle confirmation response
+  const handleConfirmDownload = (confirmed) => {
+    if (confirmed) {
+      window.open(profileData.buttons[0].link); //_blank delete // Open resume in a new tab
+      toast.success('CV downloaded successfully!');
+    } else {
+      toast.error('Download cancelled.');
     }
   };
 
@@ -43,12 +85,10 @@ function Profile() {
           </div>
           <div className='flex justify-center items-center align-middle gap-3 flex-col p-1 pt-6'>
             <p className='flex justify-center items-center font-bold align-middle gap-3 p-1'>
-              {/* <Link to={'/Resume'}  rel='noopener noreferrer' className='flex hover:bg-gray-400 md:block sm:hidden xm:hidden xl:block dark:hover:bg-gray-950 items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent dark:bg-black bg-white'>
-                View Cv
-              </Link> */}
-              <a onClick={handleDownloadCV} href={profileData.buttons[0].link} target='_blank' rel='noopener noreferrer' className='flex fill-right-to-left items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent dark:bg-black bg-white'>
+
+              <Link onClick={handleDownloadCV} to={profileData.buttons[0].link} rel='noopener noreferrer' className='flex fill-right-to-left items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent dark:bg-black bg-white'>
                 <MdFileDownload className='mr-2 active:animate-bounce' /> {profileData.buttons[0].text}
-              </a>
+              </Link>
 
               <a href={profileData.buttons[1].link} target='_blank' rel='noopener noreferrer' className='flex bg-white dark:bg-black fill-left-to-right items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent'>
                 <FaWhatsapp className='mr-2 active:animate-spin' /> {profileData.buttons[1].text}
