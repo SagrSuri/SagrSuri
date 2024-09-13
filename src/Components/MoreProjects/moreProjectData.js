@@ -11,8 +11,8 @@ const projects = [
     {
       id: 0,
       title: "View Resume",
-      githubLink: "https://sagarcv.netlify.app/",
-      liveLink: "/resume",
+      githubLink: "https://github.com/sagrsuri/cv.sagarsuri.in/",
+      liveLink: "https://cv.sagarsuri.in/",
     },
     {
       id: 1,
