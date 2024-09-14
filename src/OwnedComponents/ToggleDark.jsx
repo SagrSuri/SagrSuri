@@ -1,9 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import Toggle from 'vite-dark'
-const ToggleDark = () => {
+// eslint-disable-next-line react/prop-types
+const ToggleDark = ({onClick}) => {
   return (
-    <div>
+    <div onClick={onClick}>
       <Toggle
         buttonClass="p-2 rounded-full flex flex-col w-8 h-8 m-auto justify-center item-center bg-slate-200 hover:bg-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 shadow-sm shadow-black dark:shadow-white"
         buttonIconClass="text-[1rem] dark:text-white"

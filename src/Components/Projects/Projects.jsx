@@ -12,7 +12,7 @@ function Projects() {
       <Home>
         <section
           id="Project"
-          className="project  bg-slate-200 w-full h-full dark:bg-slate-900 py-3 "
+          className="project xm:mt-5 sm:mt-5 bg-slate-200 w-full h-full dark:bg-slate-900 py-3 "
         >
           <div className="project-wrapper max-w-7xl mx-auto px-4">
             {/* <div className="heading text-center">

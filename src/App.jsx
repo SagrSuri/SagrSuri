@@ -25,6 +25,7 @@ import GitHub from './Components/GithubProfile/Github';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop'
 import YouTubeVideo from './Components/YouTube/YouTubeVideo';
 import Resume from './CV/Resume';
+import GettingTODO from './Components/Blog/GettingTODO'
 
 
 function App() {
@@ -96,6 +97,7 @@ function App() {
           <Route path='/Projects/MoreProjects' element={<MoreProjects/>} />
           <Route path='/YouTube' element={<YouTubeVideo channelName="@SagrSuri" />} />
           <Route path='/Resume' element={<Resume/>} />
+          <Route path='/todo' element={<GettingTODO/>} />
         </Routes>
       )}
        <ScrollToTop

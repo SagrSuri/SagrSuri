@@ -1,16 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { FaHandshake } from 'react-icons/fa';
 import { links } from '../Home/linkData.js';
 import { FiMenu } from 'react-icons/fi';
 import { AiFillCloseCircle } from 'react-icons/ai';
-// import Toggle from '../Toggle/Toggle.jsx';
 import ToggleDark from '../../OwnedComponents/ToggleDark.jsx'
-// import Toggle from 'vitetoggle'
 import ToggleO from '../../OwnedComponents/ToggleO.jsx'
+import DonateButton from './DonateButton.jsx';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
+
     function changeWidth() {
         const drawerSide = document.querySelector(".drawer-side");
         if (drawerSide) {
@@ -33,7 +32,7 @@ function Navbar() {
     return (
         <div>
             {/* **************DRAWER SIDE MENU************** */}
-            <div className="flex md:hidden sm:block justify-center items-center align-middle pr-4 xl:hidden lg:hidden sticky top-0 z-40 dark:bg-slate-950 bg-slate-300">
+            <div className="flex md:hidden sm:block justify-center items-center align-middle pr-4 xl:hidden lg:hidden bg-transparent sticky top-0 z-40 ">
                 <div className="drawer">
                     <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                     <div className="drawer-content">
@@ -41,7 +40,7 @@ function Navbar() {
                             <FiMenu
                                 onClick={changeWidth}
                                 size={"2rem"}
-                                className="font-bold text-black dark:text-white m-4 cursor-pointer"
+                                className="font-bold text-black bg-slate-200 dark:bg-black dark:text-white m-4 cursor-pointer fixed right-1"
                             />
                         </label>
                     </div>
@@ -68,37 +67,22 @@ function Navbar() {
                                         </NavLink>
                                     </li>
                                 ))}
-                                {/* <li className='fill-left-to-right'>
-                                    <Link to={'/Resume'}>CV</Link>
-                                </li> */}
+                                
                                 <li className='fill-left-to-right'>
                                     <ToggleDark/>
                                 </li>
                             </div>
+                            <DonateButton/>
                         </ul>
                     </div>
 
                 </div>
-                <div>
-                    <h1 className='font-bold text-2xl flex justify-center items-center gradient-text gap-1'>
-                        <Link to={'/profile'}>
-                            <FaHandshake className="text-4xl text-pink-600 dark:text-orange-500 cursor-pointer" />
-                        </Link>
-                        Portfolio
-                    </h1>
-                </div>
             </div>
             {/* ******************NAVBAR FOR LARGE SCREEN********* */}
             <div className='sm:hidden xm:hidden md:block lg:block xl:block'>
-                <div className="h-14 flex justify-between px-6 items-center align-middle shadow-sm dark:bg-slate-950 bg-slate-300">
-                    <div>
-                        <h1 className='font-bold text-2xl flex justify-center items-center gap-1 gradient-text'>
-                            <NavLink to='/profile'>
-                                <FaHandshake className="text-4xl text-pink-600 dark:text-orange-500 cursor-pointer" />
-                            </NavLink>
-                            Portfolio
-                        </h1>
-                    </div>
+                <div className="h-14 flex justify-between px-6 items-center align-middle shadow-sm dark:bg-black bg-white pt-1">
+                    <DonateButton/>
+             
                     <ul className='flex justify-center items-center gap-5 p-2 font-bold'>
                         {links.map((link, index) => (
                             <NavLink
@@ -117,8 +101,7 @@ function Navbar() {
                             </NavLink>
                         ))}
                     </ul>
-                    <div>
-                        {/* <Toggle /> */}
+                    <div className='relative'>
                         <ToggleO/>
                     </div>
                 </div>

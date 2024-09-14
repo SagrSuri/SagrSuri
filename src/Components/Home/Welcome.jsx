@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
-
+import ToggleDark from '../../OwnedComponents/ToggleDark'
+import { Link } from 'react-router-dom';
 function Welcome() {
   const [darkMode, setDarkMode] = useState(() => {
     return JSON.parse(localStorage.getItem('darkMode')) || false;
@@ -11,8 +12,8 @@ function Welcome() {
   const externalImageUrlComputerDark = 'https://img.freepik.com/premium-photo/word-welcome-isolated-white-background-made-uncial-calligraphy-style_107173-64339.jpg?w=826';
   const externalImageUrlComputerLight = 'https://img.freepik.com/premium-vector/welcome-ready-inscription-template-neon-signboard_110464-103.jpg?w=740';
 
-  const externalImageUrlMobileTabletDark = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNTZqO1pgf4LOExXm_FvzlAHopOekof5JppQ&s';
-  const externalImageUrlMobileTabletLight = 'https://img.freepik.com/free-vector/welcome-neon-sign-vector_53876-76088.jpg?t=st=1725373247~exp=1725376847~hmac=ebb91d36ee8b7aa3545eb2a5bb87026cc8fef9d6db93614a8b64b4ed2635788a&w=360';
+  const externalImageUrlMobileTabletDark = 'https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&w=400';
+  const externalImageUrlMobileTabletLight = 'https://images.pexels.com/photos/775203/pexels-photo-775203.jpeg?auto=compress&cs=tinysrgb&w=400';
 
   useEffect(() => {
     const updateBackgroundImage = () => {
@@ -45,17 +46,18 @@ function Welcome() {
   };
 
   return (
-    <div>
-      <button
-        onClick={toggleDarkMode}
-        className="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded"
-      >
-        Toggle Dark Mode
-      </button>
+    <div className='bg-slate-950 p-2 '>
+      <div className='w-full h-10 flex justify-between px-8 gap-2 items-center align-middle m-2 '>
+        <div><ToggleDark onClick={toggleDarkMode} /></div>
+        <div><Link className=' dark:border-white fill-left-to-right border-[1px] py-1 px-3 rounded-lg text-white' to={'/profile'}>Start</Link></div>
+      </div>
       <div
-        className="flex justify-center items-center h-[80vh] bg-cover bg-center"
+        className="flex justify-center items-center min-h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
+      </div>
+      <div className='flex justify-center items-center text-xl font-bold align-middle h-10 text-white'>
+        Explore To Click Start 👆 !
       </div>
     </div>
   );

@@ -63,11 +63,11 @@ function Profile() {
 
   return (
     <Home>
-      <section id='Portfolio' className='p-10 w-full h-full'>
-        <div className='profile-wrapper flex justify-center items-center flex-col shadow-lg rounded-lg p-6'>
+      <section id='Portfolio' className='mt-10 min-h-screen w-screen'>
+        <div className='profile-wrapper flex justify-center items-center flex-col rounded-lg '>
           <div className='image-name pb-5 flex flex-col justify-center align-middle gap-2'>
             <img
-              className='w-60 h-60 transition duration-75 active:-rotate-3 active:dark:-rotate-3 rounded-e-3xl cursor-pointer'
+              className='w-52 h-52 mx-auto transition duration-75 active:transition-transform rounded-full shadow-sm shadow-[#b5b5b5] cursor-pointer'
               src={profileData.image}
               alt='Profile Picture'
             />
@@ -76,14 +76,14 @@ function Profile() {
             </h1>
           </div>
           <div>
-            <h2 className='text-2xl xm:text-[13px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-700 dark:text-slate-200 pb-4 px-4'>
+            <h2 className='text-2xl xm:text-[20px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-slate-700 dark:text-slate-200 pb-4 px-4'>
               I am a <TypingAnimation texts={profileData.titles} speed={150} delay={2000} />
             </h2>
-            <p className='text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-700 dark:text-slate-300 mb-4 px-4 text-justify discriptionData'>
+            <p className='text-sm sm:text-[18px] xm:text-[16px] md:text-lg lg:text-xl xl:text-2xl text-justify text-slate-700 dark:text-slate-300 mb-4 px-4 discriptionData'>
               {profileData.description}
             </p>
           </div>
-          <div className='flex justify-center items-center align-middle gap-3 flex-col p-1 pt-6'>
+          <div className='flex justify-center items-center align-middle gap-3 flex-col py-5'>
             <p className='flex justify-center items-center font-bold align-middle gap-3 p-1'>
 
               <Link onClick={handleDownloadCV} to={profileData.buttons[0].link} rel='noopener noreferrer' className='flex fill-right-to-left items-center px-4 py-2 rounded-full border-[1px] border-black dark:border-white bg-transparent dark:bg-black bg-white'>

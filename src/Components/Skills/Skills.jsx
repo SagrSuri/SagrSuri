@@ -6,7 +6,7 @@ import skillsData from './skillsData';
 function Skills() {
     return (
         <Home>
-            <section id='Skills' className="bg-slate-200 w-full h-full dark:bg-slate-900 py-10">
+            <section id='Skills' className="bg-slate-200 xm:mt-5 sm:mt-5 w-full h-full dark:bg-slate-900 py-10">
                 <div className="skills-wrapper max-w-4xl mx-auto px-4">
                     {/* <h1 className="text-center text-4xl font-bold mb-8 text-gray-800 dark:text-gray-200 pb-10">Skills</h1> */}
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -39,7 +39,7 @@ const TypingAnimation = ({ texts, typingSpeed = 100, deletingSpeed = 50, delay =
   }, [index, isDeleting, texts, textIndex, typingSpeed, deletingSpeed, delay]);
 
   return (
-    <span className="gradient-text xm:text-[12px] lg:text-4xl xl:text-4xl sm:text-xl md:text-xl">
+    <span className="gradient-text xm:text-[20px] lg:text-4xl xl:text-4xl sm:text-xl md:text-xl">
       {displayText}
       <span className="blinking-cursor">|</span>
     </span>

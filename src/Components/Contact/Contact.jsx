@@ -89,7 +89,7 @@ function Contact() {
           <div className="flex-1 p-8 text-gray-800 dark:text-gray-200">
             <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Let's Get In Touch</h1>
             <p className="text-lg mb-4">I'm open for any suggestions or discussions.</p>
-            <div className="w-full h-64 mb-6">
+            <div className="w-full h-64 mb-6 xm:hidden sm:hidden md:block xl:block">
               <img
                 src={contactData.imageUrl}
                 alt="Contact"
@@ -115,7 +115,7 @@ function Contact() {
           </div>
 
           {/* Contact Form Section */}
-          <div className="flex-1 p-8 bg-gray-50 dark:bg-gray-700 shadow-md border border-gray-300 dark:border-gray-700">
+          <div className="flex-1 p-8 bg-gray-50 dark:bg-gray-700 shadow-md border border-gray-300 dark:border-gray-700 ">
             <h1 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Fill Out The Form</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

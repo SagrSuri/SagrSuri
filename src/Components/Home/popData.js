@@ -10,17 +10,17 @@ import threeDesktop from './popImage/threeDesktop.jpg'
 import fourDesktop from './popImage/fourDesktop.jpg'
 
 export const mobileImages = [
-    {url: oneMobile, link: '/1Mobile'},
-    {url: twoMobile, link: '/2Mobile'},
-    { url: threeMobile, link: '/3Mobile' },
-    { url: fourMobile, link: '/4Mobile' },
+    {url: oneMobile, link: '/profile'},
+    {url: twoMobile, link: '/profile'},
+    { url: threeMobile, link: '/profile' },
+    { url: fourMobile, link: '/profile' },
     // Add more mobile images as needed
 ];
 
 export const desktopImages = [
-    {url: oneDesktop, link: '/oneDesktop'},
-    {url: twoDesktop, link: '/twoDesktop'},
-    { url: threeDesktop, link: '/threeDesktop' },
-    { url: fourDesktop , link: '/fourDesktop'}
+    {url: oneDesktop, link: '/profile'},
+    {url: twoDesktop, link: '/profile'},
+    { url: threeDesktop, link: '/profile' },
+    { url: fourDesktop , link: '/profile'}
     // Add more desktop images as needed
 ];
