@@ -38,16 +38,13 @@ I'm an aspiring full-stack web developer with a strong enthusiasm for learning a
 
 
 ## Contact Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagrsuri/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn--blue?style=social&logo=linkedin)](https://www.linkedin.com/in/sagarsuri-in/)
 [![Blogger](https://img.shields.io/badge/Blogger--red?style=social&logo=blogger)](https://sagarsurics.blogspot.com)
-[![YouTube](https://img.shields.io/badge/YouTube--red?style=social&logo=youtube)](https://www.youtube.com/@sagrsuri)
-[![Twitter](https://img.shields.io/badge/Twitter--blue?style=social&logo=X)](https://twitter.com/sagarsuri_in)
 [![Instagram](https://img.shields.io/badge/Instagram--red?style=social&logo=instagram)](https://www.instagram.com/sagarsuri.in)
-[![Whatsapp](https://img.shields.io/badge/Whatsapp--red?style=social&logo=whatsapp)](https://wa.me/918446262100)
 
 
 
-📩 [*SAGRSURI@GMAIL.COM*](mailto:SAGRSURI@GMAIL.COM)
+📩 [*SAGARSURIOFFICIAL@GMAIL.COM*](mailto:SAGARSURIOFFICIAL@GMAIL.COM @GMAIL.COM)
 <br><br><br>
 Let's connect and learn together in the exciting world of full-stack web development! <br>
 <br>
